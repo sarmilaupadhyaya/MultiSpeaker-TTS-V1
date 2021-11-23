@@ -155,7 +155,7 @@ if __name__ == "__main__":
                 x = item['x'].to(torch.long).unsqueeze(0).cuda()
                 x_lengths = torch.LongTensor([x.shape[-1]]).cuda()
                 g1 = item['sid'].unsqueeze(0).cuda()
-                g2 = item['eid'].unsqueeze(0).cuda()
+                g2 = item['lid'].unsqueeze(0).cuda()
                 
                 #print(g.shape, 'sid')
                 y_enc, y_dec, attn = model(x, x_lengths, n_timesteps=50, g1=g1, g2=g2)

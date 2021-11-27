@@ -1,0 +1,200 @@
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0432.wav|Les sages-femmes sont en grève depuis le seize octobre.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0310.wav|Le retour de la croissance est indispensable pour restaurer une Europe forte.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0014.wav|Quant aux zones franches urbaines, il s’agit d’une disposition législative…
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0463.wav|Il change l’esprit que l’on accole aux territoires à énergie positive.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0496.wav|Il y a eu un vote, monsieur Jacob !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0480.wav|Il constitue au mieux un frein là ou il faudrait appuyer sur l’accélérateur.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0657.wav|Il craint, sinon, que nous n’ayons une génération perdue.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0345.wav|Beaucoup ont demandé à être consultés sur ce projet et le seront donc dans ce cadre.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0105.wav|Pour les traiter, elles peuvent demander une délégation de compétences ou une adaptation.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0138.wav|Vous cherchiez un choc de confiance pour soutenir la demande.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0169.wav|Fillon ne l’a pas appliquée non plus !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0671.wav|La parole est à Monsieur Pierre-Alain Muet.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0394.wav|Tout le monde s’en fiche !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0467.wav|Nous sommes donc logiques jusqu’au bout.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0204.wav|Tel est l’état d’esprit dans lequel nous nous situons.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0268.wav|On ne peut pas non plus heurter de front la réalité juridique.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0144.wav|La parole est à Madame Marie-Louise Fort.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0328.wav|Comme je l’ai évoqué en introduction, une centaine d’amendements de fond ont été adoptés.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0283.wav|C’est un chemin difficile mais il faut tenir bon.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0418.wav|Ce projet est en effet une rupture, mais en faveur de la parité.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0659.wav|Je l’ai été longtemps moi aussi.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0047.wav|La parole est à Monsieur Frédéric Reiss, pour soutenir l’amendement numéro quatre-vingt un.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0041.wav|La parole est à Monsieur Olivier Falorni.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0607.wav|Leur poids économique est important.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0388.wav|Et vous le faites rétroactivement !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0354.wav|Où en sommes-nous dans l’Union européenne ?
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0441.wav|Ils ont tout à fait raison étant donné qu’à mon avis il aura du mal à être promulgué.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0122.wav|Restons-en à cette sage position.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0551.wav|Nous créons également une commission des sanctions, qui n’existait pas.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0420.wav|C’est une histoire de fous.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0573.wav|Avons-nous tout obtenu ?
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0087.wav|Pourquoi y tenons-nous autant ?
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0337.wav|Une première étape n’a donc rien de dérisoire.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0683.wav|Permettez-moi une remarque préliminaire.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0386.wav|Pour cela, l’État doit jouer pleinement son rôle.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0501.wav|Leur scolarité s’en trouve bouleversée.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0524.wav|En tout cas, j’ai senti dans ses propos l’enthousiasme que lui inspirent ces travaux.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0077.wav|Je salue l’ensemble des collègues pour leur investissement sur ces questions.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0513.wav|Elle concerne cent pour cent des familles françaises.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0372.wav|Pour autant, rien n’empêche les parties de commencer la négociation bien en amont.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0487.wav|Oui, pour projeter les bouteilles !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0585.wav|Je partage leur point de vue.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0480.wav|Or, mois après mois, il ne cesse de s’aggraver.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0398.wav|Ils sont cinquante mille, ils sont cinquante mille dont mes deux filles !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0245.wav|Les consommateurs attendent beaucoup de nous dans ce domaine.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0329.wav|Madame Pires Beaune, c’est avec grand plaisir que je retire mon amendement.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0221.wav|La défense ne peut en effet être traitée comme n’importe quelle industrie.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0168.wav|La vraie difficulté tient au délai qui s’écoule.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0701.wav|Aujourd’hui, de quoi avons-nous besoin ?
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0574.wav|Deux logiques s’opposent très clairement.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0306.wav|Mon choix s’inspire de ce qui existe pour l’intercommunalité.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0308.wav|Selon quel principe fait-on une carte ?
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0658.wav|En ce qui me concerne, je suis bien heureux d’intervenir après vous, mon cher collègue.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0276.wav|Ce budget propose surtout une autre approche de la dépense publique.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0120.wav|La parole est à Monsieur Guillaume Larrivé.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0349.wav|Troisième pilier : le paquet neutre.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0589.wav|Cela fait tout de même une demi-heure que nous vous écoutons.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0065.wav|Ils défendent leur position, on sait où ils se situent.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0397.wav|En résumé, il s’agit d’accompagner l’enfant et le beau-parent dans les actes usuels…
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0676.wav|C’est ce qu’a fait notre collègue Philippe Vigier.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0348.wav|Vous nous proposez en réalité le statu quo…
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0060.wav|La spécificité de cette violence est donc bien liée à l’âge, non au sexe.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0158.wav|Qui l’a lancé au plan européen ?
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0007.wav|C’est de la concurrence déloyale !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0736.wav|La méthode choisie n’est donc pas forcément la bonne.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0244.wav|Se pose enfin une difficulté supplémentaire.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0061.wav|La langue ne fait pas le citoyen.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0149.wav|Ce constructeur, c’est Toyota.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0252.wav|Je suggère le retrait de ces amendements.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0232.wav|Se pose juste une question de détail.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0282.wav|Il précise la notion d’opérateurs de fret express.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0728.wav|Grâce au présent amendement, nous gagnons en précision.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0300.wav|L’avenir de la filière laitière se joue aussi, surtout, au niveau européen.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0671.wav|Je ne suis pas sûr que cela en vaille la peine…
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0691.wav|Monsieur le ministre, l’espoir n’est pas un luxe.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0727.wav|Vous n’avez pas honte ?
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0341.wav|C’est ce principe que vous voulez mettre en cause.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0339.wav|Les choses bougent, les choses changent.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0054.wav|Nous en mesurerons cette année l’effet en année pleine.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0091.wav|Taisez-vous, la droite !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0128.wav|Toutes ces dispositions vont dans le bon sens.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0710.wav|Après trente ans d’échecs, droite et gauche confondues…
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0141.wav|Tous les metteurs sur le marché doivent contribuer au recyclage des objets.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0520.wav|Un budget important par son ambition du changement et par son caractère inaugural.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0610.wav|Il s’agit simplement d’une question d’équité entre les différentes générations du feu.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0689.wav|Il prévoit déjà de nombreuses exonérations.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0440.wav|C’est donc selon moi une question majeure.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0645.wav|Les maires se demandent ce qu’ils doivent faire en premier.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0047.wav|Nous n’avons pas la même notion de la lâcheté.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0146.wav|J’en viens aux contentieux européens.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0050.wav|Il n’empêche, il faut que nous avancions très clairement.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0437.wav|Ils n’en peuvent plus !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0398.wav|Nous partageons toutefois cette vision.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0012.wav|Personne n’a rien à y gagner et nous avons tout à y perdre.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0757.wav|Notre collègue Wauquiez a abondamment démontré cette exigence.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0592.wav|Vous voyez que cela touche tous les corps d’État.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0645.wav|Mon gouvernement est celui du dialogue, du progrès, de la réforme.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0709.wav|C’est une première du genre, et je peux vous assurer qu’il y en aura d’autres.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0638.wav|Il a aussi analysé l’emploi des seniors.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0569.wav|Il est tout à fait irrespectueux de ce pays et de ses institutions…
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0019.wav|C’est un échec cuisant.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0497.wav|Des tables rondes ont d’ailleurs lieu en ce moment.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0306.wav|Nous avions pris une grande mesure de justice sociale.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0197.wav|Tel est le système en vigueur.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0259.wav|Non, puisque vous gardez les deux.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0134.wav|Nous voterons donc ce collectif budgétaire.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0372.wav|L’inégalité joue aussi en ce sens.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0411.wav|Et ces inquiétudes se propagent chez tous les acteurs de l’apprentissage.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0215.wav|Veillons à adopter des textes d’équilibre.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0692.wav|Je lève votre doute, afin qu’il n’y ait aucune ambiguïté pour quiconque.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0031.wav|Il s’agit de créer des hôtels à côté de centres hospitaliers.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0649.wav|Elle entraînerait, surtout, un risque réel de contentieux, qu’il faut prendre en compte.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0184.wav|Les forces économiques et sociales y seront associées.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0132.wav|Elle ne le lui impose pas.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0718.wav|Essayons, par la loi, de les régler.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0673.wav|Le kilowattheure vaut le même prix où que l’on habite.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0165.wav|En ligue deux on parle même de « championnat des joueurs prêtés ».
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0716.wav|Il faut avoir une ligne cohérente.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0568.wav|Pourquoi une telle cécité ?
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0230.wav|Elle offre un premier apprentissage d’une langue vivante étrangère.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0261.wav|Je partage son point de vue.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0512.wav|Les ventes à la découpe constituent un très grave problème.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0117.wav|Avec la charte que nous proposons, je crois que nous avons aujourd’hui le bon outil.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0589.wav|Cet épisode n’était donc pas très utile.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0100.wav|Cette mutualisation améliore leurs performances.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0576.wav|C’est pourquoi plusieurs démarches ont été entreprises.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0652.wav|Les participants ont aussi demandé une réorientation budgétaire.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0020.wav|À un moment donné, il faut choisir.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0734.wav|Voilà le vrai sujet d’une refondation, celui qui touche l’essence même de l’éducation.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0634.wav|Et Monsieur Goasguen, qui sait tout et qui pense que les autres ne savent rien…
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0584.wav|Comme nos entreprises, nos collectivités ont, à un moment, besoin de stabilité.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0658.wav|On a parlé de malentendu ou d’erreur dans la longue intervention de notre ministre.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0327.wav|Le logement intermédiaire est une bonne réponse.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0393.wav|Celui-ci exerce des missions de diagnostic, de conseil et de surveillance en la matière.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0089.wav|Ce faisant, vous m’encouragez à continuer !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0534.wav|Il y a là quelque chose d’un peu invraisemblable.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0347.wav|Il relève d’une imposture intellectuelle.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0679.wav|J’ai l’impression d’assister à un jeu de dupes, où le plus fort gagne.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0494.wav|C’est dans ce contexte que nos collègues communistes ont déposé leur texte.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0153.wav|La séance, suspendue à onze heures vingt-cinq, est reprise à onze heures trente.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0695.wav|Nous refusons ce deux poids, deux mesures.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0201.wav|Je veux une société apaisée où chacun trouve sa place.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0536.wav|Un tel choix n’est pas compréhensible.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0281.wav|Les règles, notamment de répartition de l’enveloppe, sont déterminées.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0482.wav|Cette chambre apparaît en compétition avec le Conseil supérieur.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0030.wav|Elle donne à la démarche d’adhésion de la Croatie une forte charge symbolique.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0585.wav|Nous voudrions tous que cette réforme fiscale tant attendue aille plus vite.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0411.wav|Pour ma part, c’est l’adoption par les couples homosexuels qui me heurte le plus.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0377.wav|La gauche peut se poser gravement des questions…
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0070.wav|Voilà qui honore au contraire la France et les valeurs qu’elle représente.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0491.wav|Ces services nécessitent le partage d’équipements ou de parcs d’engins et de véhicules.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0216.wav|Beaucoup se joue à Kobané.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0417.wav|Je ne vois pas pourquoi on ne pourrait pas légiférer.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0118.wav|J’aimerais donc que vous répondiez à mon collègue Frédéric Lefebvre.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0448.wav|Nous marchons sur la tête !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0322.wav|Il s’agirait, au fond, de rétablir la justice voulue initialement.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0307.wav|Oui, les socialistes sont soucieux de l’épanouissement des familles.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0288.wav|Balzac l’affirmait : « La famille sera toujours la base des sociétés ».
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0178.wav|Nous, défenseurs de la langue flamande, sommes aujourd’hui inquiets.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0005.wav|Une demande fondée et légitime !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0652.wav|Ces propos inacceptables, il les a tenus à la soirée de soutien au mariage pour tous.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0526.wav|Ceux qui vivent ici mais veulent voter là-bas, où ils ont un passé et une histoire.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0387.wav|Les peuples européens attendent une Europe plus forte qui les protège de la crise.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0544.wav|Elle sera donc hors du cadre de la directive.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0292.wav|Madame Chapdelaine nous a dit que nous aurions dû venir aux auditions.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0330.wav|On peut dire que le débat a eu lieu, qu’il n’a pas eu lieu ou qu’il aura lieu.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0274.wav|Monsieur Muet vient d’évoquer la gouvernance du crédit d’impôt.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0585.wav|Les certifications doivent être de notoriété établie.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0648.wav|C’est d’un ridicule achevé !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0660.wav|La sémantique change mais les objectifs restent bien les mêmes.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0006.wav|Je voudrais revenir à l’incident qui a eu lieu hier.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0354.wav|Nous avons, dès lors, deux solutions : nous tourner le dos, ou nous tendre la main.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0042.wav|Ce traité n’est qu’un élément du paquet européen, un préalable.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0324.wav|Le Gouvernement a fait un choix.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0494.wav|L’arrêt Cadbury Schweppes n’est pas clair sur ce point.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0355.wav|L’histoire finit par donner raison ou tort aux uns ou aux autres.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0518.wav|Et heureusement qu’elles ont évolué !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0641.wav|Les chiffres que nous attendions sont au rendez-vous.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0491.wav|Ce n’est pas la même chose que devenir membre.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0462.wav|Nous n’oserions pas, quant à nous, porter de telles accusations.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0106.wav|Ce dispositif vise à poser un premier jalon dans la loi en ce sens.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0183.wav|Il s’agit donc d’un travail collégial qui va dans le bon sens.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0684.wav|Votre amendement est donc satisfait, monsieur Benoit.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0144.wav|Les Français exigent que nous allions vite.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0504.wav|L’augmentation des crédits de ce budget est à nos yeux un choix juste.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s04_0173.wav|Du fond, des objectifs de ce texte ?
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s02_0687.wav|Vous tuez à petit feu l’impôt sur le revenu en France.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0538.wav|Ce fut sous Vichy en particulier.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0140.wav|Je n’ai reçu aucune réponse.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s06_0359.wav|Sans elle, nous ne gagnerons pas cette bataille.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0394.wav|Telle est la vision de l’Europe que nous défendons.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0636.wav|Vous faites peur, enfin, parce que vous n’avez aucune réflexion d’ensemble.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0725.wav|Mieux encadrer les stages, c’est agir pour l’emploi des jeunes.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0016.wav|Cela revient donc à mettre sous cloche celles qui ne seront pas recensées.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0654.wav|Mais pas une journée de carence !
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s05_0227.wav|Il n’est donc pas possible de voter ce texte en l’état, à l’aveugle.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0492.wav|C’est pourquoi nous insistons autant.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0331.wav|Un seul a été adopté.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s01_0430.wav|L’économie, l’entreprise ne fonctionnent pas selon des règles arithmétiques de ce genre.
+../SiwisFrenchSpeechSynthesisDatabase/wavs/part1/neut_parl_s03_0199.wav|J’y vois un risque.

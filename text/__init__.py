@@ -1,14 +1,20 @@
 """ from https://github.com/keithito/tacotron """
 
 import re
+import pickle
 from text import cleaners
-from text.symbols import symbols
+#from text.symbols import symbols
+from feature_extraction import pipeline
 
 
-_symbol_to_id = {s: i for i, s in enumerate(symbols)}
-_id_to_symbol = {i: s for i, s in enumerate(symbols)}
-
+#_symbol_to_id = {s: i for i, s in enumerate(symbols)}
+#_id_to_symbol = {i: s for i, s in enumerate(symbols)}
 _curly_re = re.compile(r'(.*?)\{(.+?)\}(.*)')
+
+# saving symbol to id for inference as everytime we run this file, the order is changed.
+with open('../text/_symbol_to_id.pickle', 'rb') as handle:
+    _symbol_to_id = pickle.load(handle)
+    _id_to_symbol = {i: s for s,i in _symbol_to_id.items()}
 
 
 def get_arpabet(word, dictionary):
@@ -19,7 +25,7 @@ def get_arpabet(word, dictionary):
         return word
 
 
-def text_to_sequence(text, cleaner_names=["english_cleaners"], dictionary=None, langauge="en"):
+def text_to_sequence(text, cleaner_names=["english_cleaners"],arpabet_dict=None, dictionary=None, language="en"):
     '''Converts a string of text to a sequence of IDs corresponding to the symbols in the text.
 
     The text can optionally have ARPAbet sequences enclosed in curly braces embedded
@@ -35,14 +41,24 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"], dictionary=None, 
     '''
     sequence = []
 
+    if language == "fr":
+       p = pipeline.Preprocessing(text, dictionary, language="fr").get_sequence()
+       for t in p:
+           sequence += _symbols_to_sequence_french(t)
+       return sequence
+           
+
+     
     space = _symbols_to_sequence(' ')
     # Check for curly braces and treat their contents as ARPAbet:
     while len(text):
         m = _curly_re.match(text)
         if not m:
             clean_text = _clean_text(text, cleaner_names)
-            if dictionary is not None:
-                clean_text = [get_arpabet(w, dictionary) for w in clean_text.split(" ")]
+            if arpabet_dict is not None:
+
+                print(text, "arphabet")
+                clean_text = [get_arpabet(w, arpabet_dict) for w in clean_text.split(" ")]
                 for i in range(len(clean_text)):
                     t = clean_text[i]
                     if t.startswith("{"):
@@ -92,6 +108,8 @@ def _symbols_to_sequence(symbols):
 def _arpabet_to_sequence(text):
     return _symbols_to_sequence(['@' + s for s in text.split()])
 
+def _symbols_to_sequence_french(phonemes):
+    return _symbols_to_sequence(['#' + s for s in phonemes])
 
 def _should_keep_symbol(s):
     return s in _symbol_to_id and s != '_' and s != '~'

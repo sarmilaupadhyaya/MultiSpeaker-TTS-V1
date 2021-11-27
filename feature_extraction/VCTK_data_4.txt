@@ -1,0 +1,483 @@
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_073_mic2.wav|Confidence is as low as it can get.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_324_mic2.wav|They really had a go at us.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_385_mic2.wav|His third child was born in April.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_221_mic2.wav|Britain will be little affected.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_168_mic2.wav|Everything people said about it was true.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_110_mic2.wav|You can maintain regular contact.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_019_mic2.wav|Since then physicists have found that it is not reflection, but refraction by the raindrops which causes the rainbows.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_414_mic2.wav|I was the sheep.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_315_mic2.wav|Such a policy is for long-term strength.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_406_mic2.wav|The songs are just so good.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_343_mic2.wav|The European elections revealed a lack of interest and a lack of knowledge.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_128_mic2.wav|Eight others have followed.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_107_mic2.wav|I was born for this moment.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_454_mic2.wav|He was then replaced by Ross.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_153_mic2.wav|Their moment had come, or so they said.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_105_mic2.wav|It would be easy to think so.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_336_mic2.wav|This fact is supported by audience research.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_417_mic2.wav|A report will be issued by March.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_361_mic2.wav|It shows we're not much of a rugby country.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_399_mic2.wav|But it is her picture.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_293_mic2.wav|Rangers was on the agenda and I am interested.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_121_mic2.wav|All music goes into me.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_349_mic2.wav|The book is closed.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_065_mic2.wav|It is nice to be a woman and a wife.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_064_mic2.wav|People come to see the Highlands.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_330_mic2.wav|I can't get away from it.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_331_mic2.wav|He had played very well.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_014_mic2.wav|To the Hebrews it was a token that there would be no more universal floods.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_053_mic2.wav|It was dangerous but vital employment.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_474_mic2.wav|I've got to win here to be happy.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_207_mic2.wav|Both leaders were joined by senior party figures.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_165_mic2.wav|It's been my life.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_203_mic2.wav|That first victory made a huge difference to my career.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_231_mic2.wav|This is absolutely not true.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_208_mic2.wav|Her experience is certainly limited.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_477_mic2.wav|The child has denied murder.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_374_mic2.wav|It was exactly four months away.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_057_mic2.wav|Do I have a favourite?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_041_mic2.wav|Of course, on Tuesday, United were beaten despite this.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_430_mic2.wav|Equipment is also a problem.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_291_mic2.wav|We must move on.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_023_mic2.wav|If the red of the second bow falls upon the green of the first, the result is to give a bow with an abnormally wide yellow band, since red and green light when mixed form yellow.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_079_mic2.wav|Only water is currently allowed.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_427_mic2.wav|In practice, the economic tests have to be met.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_033_mic2.wav|It felt right for me.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_195_mic2.wav|Had this been common practice?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_114_mic2.wav|But they had to be paid for.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_354_mic2.wav|Both watched her win yesterday.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_007_mic2.wav|The rainbow is a division of white light into many beautiful colors.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_398_mic2.wav|It was an attitude thing.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_122_mic2.wav|That was a great performance by the team.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_050_mic2.wav|The Office is a show about nothing, then.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_190_mic2.wav|The questions came quick and fast.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_445_mic2.wav|It was an outstanding performance.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_491_mic2.wav|This operation will change her life.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_200_mic2.wav|At half-time he was presented to both teams.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_211_mic2.wav|He was a home referee.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_056_mic2.wav|So is that it, then?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_115_mic2.wav|That's the bit that's wrong.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_088_mic2.wav|They're already booked for next year.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_276_mic2.wav|Scots police had been asked to join the search to find him.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_416_mic2.wav|A police inquiry began about two weeks before the General Election.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_472_mic2.wav|We showed some spirit against Newcastle.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_133_mic2.wav|I hope we've reached the bottom now.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_471_mic2.wav|Each year they cut them down a bit.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_308_mic2.wav|There was no consultation with the executive and no need for any such consultation.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_495_mic2.wav|This is yet another example of double standards from headquarters.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_366_mic2.wav|Five local people were injured.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_068_mic2.wav|That is not possible.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_433_mic2.wav|He doesn't need to hit people.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_368_mic2.wav|We've had some pretty bad times.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_480_mic2.wav|The first four teams were all inside the previous record.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_282_mic2.wav|Friday night was a pretty good night.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_166_mic2.wav|Royal Bank provided debt funding for the deals.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_365_mic2.wav|I would never even consider it.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_034_mic2.wav|We are opening an inquiry.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_197_mic2.wav|Is it worth it?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_045_mic2.wav|We're working on it night and day.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_494_mic2.wav|That means a ban on French products.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_325_mic2.wav|They should try to get tickets.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_040_mic2.wav|I am secure in my owns position.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_082_mic2.wav|It looks that way.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_348_mic2.wav|It looks at public interest issues.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_210_mic2.wav|He suffered severe head injuries.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_485_mic2.wav|I believe in theatre.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_032_mic2.wav|He added that her comments were noted.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_205_mic2.wav|I saw people on fire.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_267_mic2.wav|I was totally wrong.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_013_mic2.wav|Some have accepted it as a miracle without physical explanation.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_337_mic2.wav|The regional government faces key elections next May.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_389_mic2.wav|Several other pupils and staff were seriously injured in the accident.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_380_mic2.wav|I have been going through a lot of things.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_381_mic2.wav|People could have a post box in the local post office.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_412_mic2.wav|Financial services also saw a sharp reduction in new business.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_083_mic2.wav|Now comes the hard part.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_383_mic2.wav|This is too much like Scotland.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_043_mic2.wav|I made my mind up before we came on tour.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_146_mic2.wav|Mr Dewar understood that.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_144_mic2.wav|The eye was badly closed on Sunday.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_189_mic2.wav|They were certainly tough, but totally fair.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_132_mic2.wav|This commitment should be built upon.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_163_mic2.wav|There is no doubt there's room for us.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_302_mic2.wav|It changed the very language.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_241_mic2.wav|He has been chosen as captain because of the person he is.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_162_mic2.wav|It is just too tough.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_072_mic2.wav|Without doubt, the debate on education is welcome.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_096_mic2.wav|What do we want to do that for?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_288_mic2.wav|If not, a deal could take many months.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_440_mic2.wav|That approach has passed its sell by date.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_244_mic2.wav|The question is whether private investors should follow their example.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_060_mic2.wav|What kind of man does that, Mr Dick?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_388_mic2.wav|The view is impressive.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_188_mic2.wav|In short, the national team without Frank is like football without feet.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_061_mic2.wav|So, did she meet him?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_290_mic2.wav|He died the following year.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_387_mic2.wav|Young people will always run away.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_423_mic2.wav|This man must be helped to keep his arm.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_428_mic2.wav|I have to protect them.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_218_mic2.wav|Life is still very tough for them.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_181_mic2.wav|Neil has worked hard throughout his career.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_039_mic2.wav|I wish I could see it again.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_408_mic2.wav|That view was confirmed by Welsh coach Graham Henry.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_345_mic2.wav|I believe they are dead.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_379_mic2.wav|He had wanted to play, but we had to be responsible about the decision we took.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_142_mic2.wav|Therefore, this type of aircraft is completely safe.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_402_mic2.wav|They have quick front players, but so do we.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_410_mic2.wav|But British scientists were not convinced by the findings.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_469_mic2.wav|If they gave me free electricity I still wouldn't support the plans.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_371_mic2.wav|Without rules, the elections could not go ahead, he stressed.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_054_mic2.wav|All options are available.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_080_mic2.wav|Put simply, it goes something like this.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_003_mic2.wav|Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_446_mic2.wav|The three previous winners also came from Scotland.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_044_mic2.wav|It does not stop here.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_251_mic2.wav|I hit you there.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_063_mic2.wav|You could very well be.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_404_mic2.wav|It was that kind of match.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_425_mic2.wav|Those overseas offices were great.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_378_mic2.wav|John gave up everything to be with me.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_191_mic2.wav|We tried four banks.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_263_mic2.wav|The proposal was rejected.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_332_mic2.wav|Sources yesterday said the Royal Bank has declined to back him.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_329_mic2.wav|We are a husband and wife team.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_227_mic2.wav|I was in daily contact.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_031_mic2.wav|I feel I did not have enough time.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_294_mic2.wav|If so, we want to hear from them.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_463_mic2.wav|That does not take much training.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_257_mic2.wav|We had a right to expect those days were over.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_449_mic2.wav|The festival runs until Tuesday.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_303_mic2.wav|It was finally agreed on Saturday.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_372_mic2.wav|I took my chance.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_183_mic2.wav|We knew their goalkeeper would take a chance.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_492_mic2.wav|New York is my home.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_093_mic2.wav|Are you going to win?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_217_mic2.wav|Now we have fresh hope.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_123_mic2.wav|It seemed like four hours.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_328_mic2.wav|He did not say that.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_483_mic2.wav|Your bank may offer you a choice of options.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_439_mic2.wav|Colin Cameron was excellent.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_117_mic2.wav|Therefore, no-one can work full time in these companies.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_339_mic2.wav|Time remains to put other candidates forward.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_145_mic2.wav|The truth will come out.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_405_mic2.wav|Good records have always been recognised by successful farmers.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_071_mic2.wav|But I had never been in a theatre.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_353_mic2.wav|It's clearly a budget.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_394_mic2.wav|His deal is effective for two years, starting in July.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_246_mic2.wav|It is based on population rather than need.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_212_mic2.wav|Brian was last to join.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_204_mic2.wav|People elsewhere in Scotland will feel cut off by this.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_358_mic2.wav|He could still be President.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_476_mic2.wav|Tell us about it.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_270_mic2.wav|I knew him well.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_255_mic2.wav|He felt too close to head office.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_131_mic2.wav|It's nice to see a very positive style of football.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_216_mic2.wav|Henry should go now.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_317_mic2.wav|Other teams moved up too.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_437_mic2.wav|Special measures were needed.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_460_mic2.wav|We have very limited capacity.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_058_mic2.wav|What do we do?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_441_mic2.wav|Sir George said every company in the country has this issue at the moment.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_085_mic2.wav|We're at home, which is important.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_035_mic2.wav|This remains the case.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_367_mic2.wav|It has helped focus attention on junior golf.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_156_mic2.wav|It gives a commitment.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_160_mic2.wav|It was clearly not a battle.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_025_mic2.wav|The west coast line is not just for middle England.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_285_mic2.wav|They have the cash and the fire power.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_070_mic2.wav|He has real potential.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_155_mic2.wav|The second failed completely.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_138_mic2.wav|It's very dangerous for markets.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_300_mic2.wav|That was around July, August.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_286_mic2.wav|The institute board will take the decision.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_271_mic2.wav|I see no reason to doubt that the situation in Scotland is any different.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_170_mic2.wav|No, but my wife is.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_103_mic2.wav|The referee had been right.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_097_mic2.wav|Does the name matter?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_352_mic2.wav|That would concern me lot.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_429_mic2.wav|The people are nice, though.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_259_mic2.wav|We were looking for a base.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_169_mic2.wav|I've no idea how it works.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_280_mic2.wav|Sales will begin by the end of October.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_119_mic2.wav|Trading is tough at the moment.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_055_mic2.wav|How are you, sir?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_125_mic2.wav|We beat the Welsh team.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_026_mic2.wav|I've got the same feeling as I had last week in Germany.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_124_mic2.wav|The family moved around a lot.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_099_mic2.wav|What are you not good at?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_490_mic2.wav|We've got good options.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_284_mic2.wav|It's not a small step.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_479_mic2.wav|We were given a break.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_418_mic2.wav|The legislation is expected to be introduced next spring.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_462_mic2.wav|They're interested only in profits.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_154_mic2.wav|He plans to call for an aid package from Mr Macdonald.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_234_mic2.wav|However, there is an issue, isn't there?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_274_mic2.wav|The third has yet to be named.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_415_mic2.wav|I've learned a huge amount from Michael.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_192_mic2.wav|Is there a waiting list?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_434_mic2.wav|A job is a job, after all.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_277_mic2.wav|People realise we have a job to do.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_377_mic2.wav|It would have to look for outside funding.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_137_mic2.wav|This is a separate announcement which is in a different league.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_321_mic2.wav|We want immediate action.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_453_mic2.wav|They finished second and third.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_136_mic2.wav|However, it's possible that Dick can have influence some Dutch players to go there.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_141_mic2.wav|That comes at a cost.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_451_mic2.wav|These days are past.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_038_mic2.wav|It was a total surprise.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_382_mic2.wav|If we get a penalty next week I want to take it.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_484_mic2.wav|That is surely worth a try.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_327_mic2.wav|They emerged before the patients left hospital.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_098_mic2.wav|how do you get it back?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_159_mic2.wav|Sport is good for you.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_390_mic2.wav|It is the same with Barry.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_360_mic2.wav|Blair is very positive at European Councils.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_048_mic2.wav|There remains some Scottish influence, however.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_262_mic2.wav|They made such decisions in London.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_104_mic2.wav|Jack was always going to win this one.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_420_mic2.wav|He is very fast all right.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_036_mic2.wav|Certainly, we do as well.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_411_mic2.wav|They like big name players.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_196_mic2.wav|What do they want us to do?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_171_mic2.wav|It is a large number.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_087_mic2.wav|The circumstances have changed since last year.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_397_mic2.wav|It was either Wednesday or Thursday, he said.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_376_mic2.wav|He was always Scottish Labour, or simply Labour.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_431_mic2.wav|We cannot ask for them back.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_489_mic2.wav|That time may never be broken.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_296_mic2.wav|Perhaps they were right.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_005_mic2.wav|She can scoop these things into three red bags, and we will go meet her Wednesday at the train station.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_260_mic2.wav|We had a grand view.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_108_mic2.wav|I first met him last summer.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_223_mic2.wav|IT has been a tough year for Scottish business.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_047_mic2.wav|The results, out tomorrow, will focus on the company's strategy.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_468_mic2.wav|He dismissed the action.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_266_mic2.wav|Everyone wanted him to win.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_447_mic2.wav|In the old days, it was easy.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_126_mic2.wav|An announcement is expected within a few months.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_467_mic2.wav|This is a big advantage.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_309_mic2.wav|Five years ago its return was rejected.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_214_mic2.wav|Three hit the target.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_386_mic2.wav|They want the style of the sound changed a bit.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_081_mic2.wav|Over one million people have been forced from their homes.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_346_mic2.wav|We have no information on Iraq.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_465_mic2.wav|He enjoyed being with his family.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_130_mic2.wav|That will bring about a dramatic improvement.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_127_mic2.wav|We have a team to reach the final.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_311_mic2.wav|The board would report to the Scottish Parliament.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_012_mic2.wav|Throughout the centuries people have explained the rainbow in various ways.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_020_mic2.wav|Many complicated ideas about the rainbow have been formed.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_062_mic2.wav|It happens from time to time.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_258_mic2.wav|The group's increasing scale will help.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_193_mic2.wav|Do they think anyone else wants them?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_112_mic2.wav|This makes up for it.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_444_mic2.wav|The company was set up six years ago.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_069_mic2.wav|This is far too high.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_458_mic2.wav|The technology looks excellent.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_424_mic2.wav|Our performance wasn't perfect.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_233_mic2.wav|It was a great evening.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_335_mic2.wav|It's quite crucial for me.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_006_mic2.wav|When the sunlight strikes raindrops in the air, they act as a prism and form a rainbow.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_173_mic2.wav|Art can challenge our value system.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_419_mic2.wav|We didn't really have to power up.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_298_mic2.wav|Many events are down on numbers.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_245_mic2.wav|I go home only once.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_422_mic2.wav|We have some options there.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_297_mic2.wav|Autumn will be a real challenge.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_042_mic2.wav|It is a complex deal.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_161_mic2.wav|No such meeting took place.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_027_mic2.wav|He does not even trust his own members.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_322_mic2.wav|Our relationship has been very good.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_473_mic2.wav|It's a tough old job to get for your first job.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_235_mic2.wav|After the match, do you?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_341_mic2.wav|This deal is a great boost for the Borders.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_333_mic2.wav|That will be a decision for BBC Scotland.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_009_mic2.wav|There is , according to legend, a boiling pot of gold at one end.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_312_mic2.wav|They might surprise themselves.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_135_mic2.wav|Domestic orders have also fallen since January.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_184_mic2.wav|She really suffered for her art.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_186_mic2.wav|She runs like her mother.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_228_mic2.wav|He talks too much.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_486_mic2.wav|The accident seemed so simple.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_092_mic2.wav|However this weekend it will be different.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_059_mic2.wav|Why do it otherwise?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_199_mic2.wav|How do you take them away?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_306_mic2.wav|He remains a main board director of Royal.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_187_mic2.wav|I remember that day well.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_435_mic2.wav|It all came good.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_395_mic2.wav|We learned two things.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_074_mic2.wav|I think with my experience I can help the team.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_319_mic2.wav|Not one person spoke badly.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_185_mic2.wav|The single currency could well lead to a single tax policy.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_143_mic2.wav|I told them during their morning break.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_470_mic2.wav|It is an industry failure.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_198_mic2.wav|Does it matter?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_456_mic2.wav|It had been accepted.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_089_mic2.wav|The savings can be dramatic.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_299_mic2.wav|He had served his time.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_206_mic2.wav|This takes no account of hotel and tourism losses.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_224_mic2.wav|It was all great training.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_369_mic2.wav|That is for white people.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_252_mic2.wav|The pension levels will remain the same.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_400_mic2.wav|The tickets are on their way.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_094_mic2.wav|What is the wife?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_174_mic2.wav|Now he's back on top again.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_172_mic2.wav|I'm taking each day as it comes.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_355_mic2.wav|Her father had died recently.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_364_mic2.wav|They had to have hospital treatment.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_015_mic2.wav|The Greeks used to imagine that it was a sign from the gods to foretell war or heavy rain.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_140_mic2.wav|He nearly killed my son.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_109_mic2.wav|The newspapers, by contrast, had held their value.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_213_mic2.wav|It was men against boys.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_401_mic2.wav|He plays only for himself.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_066_mic2.wav|She always put the party first.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_030_mic2.wav|Do not give your details to anyone.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_363_mic2.wav|The purchase was widely criticised by both analysts and investors.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_180_mic2.wav|I've never had a year like this.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_049_mic2.wav|I only signed this morning.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_464_mic2.wav|Scotland needs this award.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_076_mic2.wav|The deal was done on Wednesday.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_313_mic2.wav|It is his speed off the mark that is so impressive.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_024_mic2.wav|This is a very common type of bow, one showing mainly red and yellow, with little or no green or blue.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_091_mic2.wav|They are a different team at home.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_393_mic2.wav|No, because they look good boys.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_248_mic2.wav|They were game, but not very good.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_391_mic2.wav|The experts got it wrong.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_264_mic2.wav|This term they are second bottom with three games left to play.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_101_mic2.wav|Two of our crew were killed.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_075_mic2.wav|That is really all.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_452_mic2.wav|The official also said no groups had made any terrorist claims involving the crash.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_106_mic2.wav|You're quite wrong, he said.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_373_mic2.wav|It has the potential to be another North Sea.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_396_mic2.wav|It has been only average.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_120_mic2.wav|It came a bit late.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_116_mic2.wav|Nothing would now surprise me.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_459_mic2.wav|The party had high hopes of taking the seat from Labour.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_275_mic2.wav|He was called in by the government last year to report on pension reform.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_409_mic2.wav|You took the law into your own hands.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_292_mic2.wav|It's just an area of water.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_482_mic2.wav|I'd like my TV programmes to be simple, but not too simple.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_461_mic2.wav|In general terms, the proposals are very much in line with expectations.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_008_mic2.wav|These take the shape of a long round arch, with its path high above, and its two ends apparently beyond the horizon.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_077_mic2.wav|The time has arrived for a review.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_219_mic2.wav|It was a piece of art.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_269_mic2.wav|Others get through it.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_318_mic2.wav|I just felt like a dead loss.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_090_mic2.wav|They would now be able to look forward with confidence.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_455_mic2.wav|They thought he was asking the right questions.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_202_mic2.wav|I was independent but I am not now.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_442_mic2.wav|WE all watch the same match.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_340_mic2.wav|In Great Britain, it has a life of its own.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_011_mic2.wav|When a man looks for something beyond his reach, his friends say he is looking for the pot of gold at the end of the rainbow.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_421_mic2.wav|They could change them tomorrow.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_253_mic2.wav|He is keen to stay in public service.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_167_mic2.wav|We have to look at everything before we make any final decision.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_487_mic2.wav|Her father wasn't best pleased.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_265_mic2.wav|Some changes have been achieved at great cost.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_279_mic2.wav|It would be nice to be involved in another victory.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_256_mic2.wav|We have brought the staff back on board.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_100_mic2.wav|His massive advantage was never under threat yesterday.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_426_mic2.wav|She had black eyes.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_247_mic2.wav|Progress, however, is only achieved through hard work and heavy investment.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_201_mic2.wav|Scotland will not vote for New Labour next time.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_356_mic2.wav|We accept the new rules.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_301_mic2.wav|The direct effects on trade will be limited.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_310_mic2.wav|He left pretty quickly.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_177_mic2.wav|Once again, he refused.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_350_mic2.wav|I would be very keen on a move to Italy.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_359_mic2.wav|It had been introduced over six years.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_493_mic2.wav|He added that trading data for the new stores would be revealed in due course.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_305_mic2.wav|Only one got through.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_362_mic2.wav|Her body has never been found.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_370_mic2.wav|Neither had any other career.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_230_mic2.wav|Many changes are positive changes.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_113_mic2.wav|Firm action must be taken.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_403_mic2.wav|We will be putting in a written appeal tomorrow morning.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_334_mic2.wav|I saw one man vote five times.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_176_mic2.wav|No-one wants to talk about death.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_018_mic2.wav|Aristotle thought that the rainbow was caused by reflection of the sun's rays by the rain.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_004_mic2.wav|We also need a small plastic snake and a big toy frog for the kids.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_086_mic2.wav|Because I was a very physical person.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_222_mic2.wav|The two companies were not for sale.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_240_mic2.wav|This is a big game for both of us.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_466_mic2.wav|It's a strategy which would work beyond this show.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_249_mic2.wav|I did not vote either way.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_457_mic2.wav|The truth was rather different.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_436_mic2.wav|It was a hard fight.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_243_mic2.wav|Eight months later, he was dead.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_273_mic2.wav|If I didn't go for the world record, I'd feel guilty.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_028_mic2.wav|We're only taking on a couple just now.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_272_mic2.wav|All films open tomorrow
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_237_mic2.wav|Have I really come to this?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_078_mic2.wav|That is very important.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_178_mic2.wav|We just want this session to end.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_323_mic2.wav|Someone should tell them.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_215_mic2.wav|That could mean the difference between life and death in action.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_488_mic2.wav|Just look at his fashion sense.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_326_mic2.wav|The change could come as soon as September.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_413_mic2.wav|Williams said the same.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_448_mic2.wav|Powers looks straight ahead.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_287_mic2.wav|He followed the Italian route.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_307_mic2.wav|It's not a marketing scheme.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_268_mic2.wav|I may play with two players up, maybe not.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_278_mic2.wav|I'm interested in interesting work.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_179_mic2.wav|You can spend money on housing.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_149_mic2.wav|Is it in the right place?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_010_mic2.wav|People look, but no one ever finds it.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_351_mic2.wav|He is fully fit.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_236_mic2.wav|Has the conflict started?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_158_mic2.wav|We have come a long way since then.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_051_mic2.wav|We were leading by two goals.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_357_mic2.wav|Neil knows the score.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_261_mic2.wav|Walker declined to put a figure on losses.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_295_mic2.wav|She doesn't know the half of it.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_001_mic2.wav|Please call Stella.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_281_mic2.wav|He will get his chances.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_392_mic2.wav|We have done our own tests.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_194_mic2.wav|So what happens next?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_102_mic2.wav|I feel confident about the outcome.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_164_mic2.wav|The options seem limited.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_139_mic2.wav|He said some things which were better left alone.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_475_mic2.wav|I'm delighted for Andy.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_232_mic2.wav|Wall Street provided the British market with little fresh direction.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_478_mic2.wav|The union has threatened strike action unless these demands are met.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_226_mic2.wav|No partners would lose their jobs.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_283_mic2.wav|She now lives in London.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_481_mic2.wav|The parties include the Scottish Executive.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_450_mic2.wav|We are unable to provide support for future issues.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_209_mic2.wav|The labour side has developed in the North area.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_407_mic2.wav|So I moved on.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_046_mic2.wav|The head teacher was a highly effective leader and manager.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_152_mic2.wav|Did it work?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_347_mic2.wav|We had to approach it the way we feel we can do best.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_432_mic2.wav|The tie isn't over.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_443_mic2.wav|We would deal first with the biggest party.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_375_mic2.wav|We have a high quality product.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_250_mic2.wav|We really are a team.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_029_mic2.wav|The local primary is excellent.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_148_mic2.wav|Do I think about them often?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_182_mic2.wav|He is particularly happy with the size of the gallery.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_147_mic2.wav|She's been shot.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_254_mic2.wav|For that reason cover should not be given.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_320_mic2.wav|The performance continues to improve.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_316_mic2.wav|This is extremely positive news.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_129_mic2.wav|These people were my friends.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_118_mic2.wav|But I am in practice.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_151_mic2.wav|Does that put pressure on us?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_157_mic2.wav|Now it was Britain's turn.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_344_mic2.wav|I was at the British Olympic Medical Centre, on Friday.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_289_mic2.wav|You have made your point.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_304_mic2.wav|I did so, making the positive case for Scottish New Labour.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_150_mic2.wav|Did he trip?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_067_mic2.wav|Things have just worked out this way.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_238_mic2.wav|Why do you want to come to Edinburgh?
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_134_mic2.wav|This man could yet win over Scottish hearts.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_002_mic2.wav|Ask her to bring these things with her from the store.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_016_mic2.wav|The Norsemen considered the rainbow as a bridge over which gods passed from earth to their home in the sky.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_242_mic2.wav|They are expected to appear at Edinburgh Sheriff Court today.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_084_mic2.wav|Maybe they will see sense.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_314_mic2.wav|Hibs are playing with style now.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_021_mic2.wav|The difference in the rainbow depends considerably upon the size of the drops, and the width of the colored band increases as the size of the drops increases.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_342_mic2.wav|An opera company needs to have its orchestra.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_438_mic2.wav|However, the proposal is not aimed at rugby, but at all sports.
+../VCTKcorpus/wav48_silence_trimmed/p264/wav/p264_037_mic2.wav|It carried a double message.

@@ -48,7 +48,7 @@ def load_wav_to_torch(full_path, target_sampling_rate=22050):
     
 def main(filepath, language, speakerid, langid):
     print(language, speakerid, langid)
-    f = open("../resources/filelists/final_" +filepath, "w")
+    f = open("../resources/filelists/final3_" +filepath, "w")
     for line in open(filelists_path, 'r'):
         fpath = line.strip().split('|')[0]
         text = line.strip().split('|')[1]
@@ -57,7 +57,6 @@ def main(filepath, language, speakerid, langid):
         np.save(fpath.replace('.wav', '.npy'), melspec)
         #p = pipeline.Preprocessing(text, dictionary, language="en")
         seq = [str(each) for each in text_to_sequence(text, dictionary=dictionary, language=language)]
-        print(seq)
         if seq is None:
             import pdb
             pdb.set_trace()
@@ -84,7 +83,4 @@ if __name__ == "__main__":
         
         
 
-        
-        
-        
 

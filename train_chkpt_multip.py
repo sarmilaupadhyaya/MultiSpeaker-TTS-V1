@@ -23,15 +23,15 @@ from text.symbols import symbols
 import os
 import torch.multiprocessing as mp
 import torch.distributed as dist
-from apex.parallel import DistributedDataParallel as DDP
-from apex import amp
+#from apex.parallel import DistributedDataParallel as DDP
+#from apex import amp
 import glob
 
 import argparse
 parser = argparse.ArgumentParser(description='Run training for 4 model variants.')
-parser.add_argument('--speaker', type=str, required=True, options=['id', 'embedding'],
+parser.add_argument('--speaker', type=str, required=True, choices=['id', 'embedding'],
                     help='Whether to represent speaker via their id or embedding network')
-parser.add_argument('--language', type=str, required=True, options=['id', 'embedding'],
+parser.add_argument('--language', type=str, required=True, choices=['id', 'embedding'],
                     help='Whether to represent language via its id or embedding network')
 args = parser.parse_args()
 speaker_representation = args.speaker

@@ -18,12 +18,16 @@ from model.base import BaseModule
 from model.text_encoder import TextEncoder
 from model.diffusion import Diffusion
 from model.utils import sequence_mask, generate_path, duration_loss, fix_len_compatibility
+from model.expressivity_encoder import EmbeddingNetwork
 
 
 class GradTTS(BaseModule):
-    def __init__(self, n_vocab, n_enc_channels, filter_channels, filter_channels_dp, 
-                 n_heads, n_enc_layers, enc_kernel, enc_dropout, window_size, 
-                 n_feats, dec_dim, beta_min, beta_max, pe_scale, n_speakers, n_emotions, gin_channels1, gin_channels2):
+    def __init__(self, n_vocab, n_enc_channels, filter_channels, filter_channels_dp,
+                 n_heads, n_enc_layers, enc_kernel, enc_dropout, window_size,
+                 n_feats, dec_dim, beta_min, beta_max,
+                 pe_scale, n_speakers, n_langs, gin_channels1, gin_channels2,
+                 speaker_representation, language_representation):
+                 # n_emotions -> n_langs
         super(GradTTS, self).__init__()
         self.n_vocab = n_vocab
         self.n_enc_channels = n_enc_channels
@@ -41,24 +45,43 @@ class GradTTS(BaseModule):
         self.pe_scale = pe_scale
         self.n_speakers = n_speakers
         self.gin_channels1 = gin_channels1
-        self.n_emotions = n_emotions
+        self.n_langs = n_langs #
         self.gin_channels2 = gin_channels2
 
-        self.encoder = TextEncoder(n_vocab, n_feats, n_enc_channels, 
-                                   filter_channels, filter_channels_dp, n_heads, 
-                                   n_enc_layers, enc_kernel, enc_dropout, window_size, gin_channels1, gin_channels2)
-        self.decoder = Diffusion(n_feats, dec_dim, beta_min, beta_max, pe_scale, gin_channels1, gin_channels2)
-        
+        self.speaker_representation = speaker_representation
+        self.language_representation = language_representation
+
+        self.encoder = TextEncoder(n_vocab, n_feats, n_enc_channels,
+                                   filter_channels, filter_channels_dp, n_heads,
+                                   n_enc_layers, enc_kernel, enc_dropout,
+                                   window_size, gin_channels1, gin_channels2)
+        self.decoder = Diffusion(n_feats, dec_dim, beta_min, beta_max, pe_scale,
+                                 gin_channels1, gin_channels2)
+
+        ########################
+        # depending on the version of the model, we choose the correct
+        # representation for speaker and language.
+        # it's either a simple Embedding or an Embedding network
         if n_speakers > 1:
-            self.emb_g1 = nn.Embedding(n_speakers, gin_channels1)
-            nn.init.uniform_(self.emb_g1.weight, -0.1, 0.1)
-            
-        if n_emotions > 1:
-            self.emb_g2 = nn.Embedding(n_emotions, gin_channels2)
-            nn.init.uniform_(self.emb_g2.weight, -0.1, 0.1)
-        
-        
-                
+            if speaker_representation == 'id':
+                self.emb_g1 = nn.Embedding(n_speakers, gin_channels1)
+                nn.init.uniform_(self.emb_g1.weight, -0.1, 0.1)
+            else:
+                self.emb_g1 = EmbeddingNetwork(n_feats, gin_channels1)
+
+        # if both speaker and language representations are 'embedding',
+        # then we use the same n_feats for them: is this correct?
+
+        if n_langs > 1:
+            if language_representation == 'id':
+                self.emb_g2 = nn.Embedding(n_langs, gin_channels2)
+                nn.init.uniform_(self.emb_g2.weight, -0.1, 0.1)
+            else:
+                self.emb_g2 = EmbeddingNetwork(n_feats, gin_channels2) # 10 X 2012 X 80
+        #########################
+
+
+
 
     @torch.no_grad()
     def forward(self, x, x_lengths, n_timesteps, g1=None, g2=None, temperature=1.0, stoc=False, length_scale=1.0):
@@ -67,7 +90,7 @@ class GradTTS(BaseModule):
             1. encoder outputs
             2. decoder outputs
             3. generated alignment
-        
+
         Args:
             x (torch.Tensor): batch of texts, converted to a tensor with phoneme embedding ids.
             x_lengths (torch.Tensor): lengths of texts in batch.
@@ -78,21 +101,21 @@ class GradTTS(BaseModule):
             length_scale (float, optional): controls speech pace.
                 Increase value to slow down generated speech and vice versa.
         """
-        
-        
-        
+
+
+
         #print(g.shape, 'g dim')
         x, x_lengths, g1, g2 = self.relocate_input([x, x_lengths, g1, g2])
-        #print(g.shape, g)        
+        #print(g.shape, g)
         if g1 is not None:
             #print(g.shape, 'before nn.embedding')
-            g1 = F.normalize(self.emb_g1(g1)).permute(0,2,1)#.unsqueeze(-1)  
-            
+            g1 = F.normalize(self.emb_g1(g1)).permute(0,2,1)#.unsqueeze(-1)
+
         if g2 is not None:
             #print(g.shape, 'before nn.embedding')
-            g2 = F.normalize(self.emb_g2(g2)).permute(0,2,1)#.unsqueeze(-1)  
+            g2 = F.normalize(self.emb_g2(g2.permute(0,2,1)))
 
-        # Get encoder_outputs `mu_x` and log-scaled token durations `logw`
+        #print(g1.shape, g2.shape, 'after embedding extraction ')# Get encoder_outputs `mu_x` and log-scaled token durations `logw`
         mu_x, logw, x_mask = self.encoder(x, x_lengths, g1=g1, g2=g2)
 
         w = torch.exp(logw) * x_mask
@@ -125,7 +148,7 @@ class GradTTS(BaseModule):
             1. duration loss: loss between predicted token durations and those extracted by Monotinic Alignment Search (MAS).
             2. prior loss: loss between mel-spectrogram and encoder outputs.
             3. diffusion loss: loss between gaussian noise and its reconstruction by diffusion-based decoder.
-            
+
         Args:
             x (torch.Tensor): batch of texts, converted to a tensor with phoneme embedding ids.
             x_lengths (torch.Tensor): lengths of texts in batch.
@@ -134,22 +157,20 @@ class GradTTS(BaseModule):
             out_size (int, optional): length (in mel's sampling rate) of segment to cut, on which decoder will be trained.
                 Should be divisible by 2^{num of UNet downsamplings}. Needed to increase batch size.
         """
-        
+
         #print(g.shape, 'g dim')
         x, x_lengths, y, y_lengths, g1, g2 = self.relocate_input([x, x_lengths, y, y_lengths, g1, g2])
-        
-        #print(g.shape, 'before embedding')
-        
+
+        #print(g2.shape, 'before embedding')
+
         if g1 is not None:
             g1 = F.normalize(self.emb_g1(g1)).permute(0,2,1)#.unsqueeze(-1)
-            
-        if g2 is not None:
-            g2 = F.normalize(self.emb_g2(g2)).permute(0,2,1)#.unsqueeze(-1)
-            
-            #print(g.shape, 'after embedding')
 
+        if g2 is not None:
+            #print(g2.shape, 'mel shape as input to exp encoder')
+            g2 = F.normalize(self.emb_g2(g2.permute(0,2,1)))#.unsqueeze(-1)
+            #print(g2.shape, 'output shape of encoding 16, 1, 80')
         # Get encoder_outputs `mu_x` and log-scaled token durations `logw`
-        #print(g1.shape, g2.shape, 'g1 g2')
         mu_x, logw, x_mask = self.encoder(x, x_lengths, g1=g1, g2=g2)
         y_max_length = y.shape[-1]
 
@@ -180,7 +201,7 @@ class GradTTS(BaseModule):
                 torch.tensor(random.choice(range(start, end)) if end > start else 0)
                 for start, end in offset_ranges
             ]).to(y_lengths)
-            
+
             attn_cut = torch.zeros(attn.shape[0], attn.shape[1], out_size, dtype=attn.dtype, device=attn.device)
             y_cut = torch.zeros(y.shape[0], self.n_feats, out_size, dtype=y.dtype, device=y.device)
             y_cut_lengths = []
@@ -192,7 +213,7 @@ class GradTTS(BaseModule):
                 attn_cut[i, :, :y_cut_length] = attn[i, :, cut_lower:cut_upper]
             y_cut_lengths = torch.LongTensor(y_cut_lengths)
             y_cut_mask = sequence_mask(y_cut_lengths).unsqueeze(1).to(y_mask)
-            
+
             attn = attn_cut
             y = y_cut
             y_mask = y_cut_mask
@@ -204,7 +225,7 @@ class GradTTS(BaseModule):
         # Compute loss between aligned encoder outputs and mel-spectrogram
         prior_loss = torch.sum(0.5 * ((y - mu_y) ** 2 + math.log(2 * math.pi)) * y_mask)
         prior_loss = prior_loss / (torch.sum(y_mask) * self.n_feats)
-        
+
         # Compute loss of score-based decoder
         #print('before diffusion', y.shape, y_mask.shape, mu_y.shape, g.shape)
         diff_loss = self.decoder.compute_loss(y, y_mask, mu_y, g1, g2)

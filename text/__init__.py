@@ -1,17 +1,25 @@
 """ from https://github.com/keithito/tacotron """
 
 import re
-import pickle
+import sys
 from text import cleaners
 #from text.symbols import symbols
 
+# pickle files are saved with protocol 5
+# if python version is less than 3.8, we need
+# special module to open them
+python_version = float(sys.version[:3])
+if python_version >= 3.8:
+    import pickle
+else:
+    import pickle5 as pickle
 
 #_symbol_to_id = {s: i for i, s in enumerate(symbols)}
 #_id_to_symbol = {i: s for i, s in enumerate(symbols)}
 _curly_re = re.compile(r'(.*?)\{(.+?)\}(.*)')
 
 # saving symbol to id for inference as everytime we run this file, the order is changed.
-with open('../text/_symbol_to_id.pickle', 'rb') as handle:
+with open('./text/_symbol_to_id.pickle', 'rb') as handle:
     _symbol_to_id = pickle.load(handle)
     _id_to_symbol = {i: s for s,i in _symbol_to_id.items()}
 

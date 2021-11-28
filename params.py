@@ -18,12 +18,12 @@ n_feats = 80
 add_blank = False
 
 # multispeaker
-n_speakers = 10
+n_speakers =7 #n_Speakers+1
 gin_channels_spk = 80
 # expressive
 #n_emotions = 5# n_emotions + 1, 
 #gin_channels_emotion = 80
-n_langs = 10
+n_langs = 2
 gin_channels_langs = 80
 
 # encoder parameters

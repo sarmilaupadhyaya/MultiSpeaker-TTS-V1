@@ -30,7 +30,7 @@ class TextMelMultispeakerDataset(torch.utils.data.Dataset):
         random.shuffle(self.filepaths_and_text)
 
     def get_pair(self, filepath_and_text):
-        filepath, text, sid, eid, langid = filepath_and_text[0], filepath_and_text[1], filepath_and_text[2], filepath_and_text[3], filepath_and_text[4]
+        filepath, text, langid, eid,sid = filepath_and_text[0], filepath_and_text[1], filepath_and_text[2], filepath_and_text[3], filepath_and_text[4]
         text = self.get_text(text, add_blank=self.add_blank)
         sid = self.get_sid(sid)
         eid = self.get_eid(eid)
@@ -107,13 +107,8 @@ class TextMelMultispeakerBatchCollate(object):
         y_lengths = torch.LongTensor(y_lengths)
         x_lengths = torch.LongTensor(x_lengths)
         return {'x': x, 'x_lengths': x_lengths, 'y': y, 'y_lengths': y_lengths, 'sid': sid, 'eid': eid, 'lid':lid}
-#cmudict_path = params.cmudict_path
-#s = TextMelMultispeakerDataset("resources/filelists/final_siwis_train.txt", cmudict_path)
 
-#for filelist in s.filepaths_and_text:
-#    result = s.get_pair(filelist)
-#    print(result)
-#    import pdb
-#    pdb.set_trace()
+
+
 
 

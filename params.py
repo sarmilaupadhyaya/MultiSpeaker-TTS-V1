@@ -23,7 +23,7 @@ gin_channels_spk = 80
 # expressive
 #n_emotions = 5# n_emotions + 1, 
 #gin_channels_emotion = 80
-n_langs = 2
+n_langs = 10
 gin_channels_langs = 80
 
 # encoder parameters
@@ -43,7 +43,7 @@ beta_max = 20.0
 pe_scale = 1000  # 1 for `grad-tts-old.pt` checkpoint
 
 # training parameters
-log_dir = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/akriukova/gradtts_model/logs/' # model dir path
+log_dir = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/' # model dir path
 
 test_size = 4
 n_epochs = 10000

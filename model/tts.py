@@ -106,14 +106,22 @@ class GradTTS(BaseModule):
 
         #print(g.shape, 'g dim')
         x, x_lengths, g1, g2 = self.relocate_input([x, x_lengths, g1, g2])
-        #print(g.shape, g)
+        #################
+        # permute before or after depending on 'id' or 'embedding'
         if g1 is not None:
-            #print(g.shape, 'before nn.embedding')
-            g1 = F.normalize(self.emb_g1(g1)).permute(0,2,1)#.unsqueeze(-1)
+            if self.speaker_representation == 'id':
+                g1 = F.normalize(self.emb_g1(g1)).permute(0,2,1)#.unsqueeze(-1)
+            else:
+                g1 = F.normalize(self.emb_g1(g1.permute(0,2,1)))#.unsqueeze(-1)
 
         if g2 is not None:
-            #print(g.shape, 'before nn.embedding')
-            g2 = F.normalize(self.emb_g2(g2.permute(0,2,1)))
+            #print(g2.shape, 'mel shape as input to exp encoder')
+            if self.language_representation == 'id':
+                g2 = F.normalize(self.emb_g2(g2)).permute(0,2,1)#.unsqueeze(-1)
+            else:
+                g2 = F.normalize(self.emb_g2(g2.permute(0,2,1)))#.unsqueeze(-1)
+            #print(g2.shape, 'output shape of encoding 16, 1, 80')
+        #################
 
         #print(g1.shape, g2.shape, 'after embedding extraction ')# Get encoder_outputs `mu_x` and log-scaled token durations `logw`
         mu_x, logw, x_mask = self.encoder(x, x_lengths, g1=g1, g2=g2)
@@ -163,13 +171,23 @@ class GradTTS(BaseModule):
 
         #print(g2.shape, 'before embedding')
 
+        #################
+        # permute before or after depending on 'id' or 'embedding'
         if g1 is not None:
-            g1 = F.normalize(self.emb_g1(g1)).permute(0,2,1)#.unsqueeze(-1)
+            if self.speaker_representation == 'id':
+                g1 = F.normalize(self.emb_g1(g1)).permute(0,2,1)#.unsqueeze(-1)
+            else:
+                g1 = F.normalize(self.emb_g1(g1.permute(0,2,1)))#.unsqueeze(-1)
 
         if g2 is not None:
             #print(g2.shape, 'mel shape as input to exp encoder')
-            g2 = F.normalize(self.emb_g2(g2.permute(0,2,1)))#.unsqueeze(-1)
+            if self.language_representation == 'id':
+                g2 = F.normalize(self.emb_g2(g2)).permute(0,2,1)#.unsqueeze(-1)
+            else:
+                g2 = F.normalize(self.emb_g2(g2.permute(0,2,1)))#.unsqueeze(-1)
             #print(g2.shape, 'output shape of encoding 16, 1, 80')
+        #################
+
         # Get encoder_outputs `mu_x` and log-scaled token durations `logw`
         mu_x, logw, x_mask = self.encoder(x, x_lengths, g1=g1, g2=g2)
         y_max_length = y.shape[-1]

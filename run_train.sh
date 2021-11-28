@@ -4,7 +4,7 @@
 #source miniconda/bin/activate
 source newenv/bin/activate
 
-export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=0,1
 
-python train_chkpt.py
+python train_chkpt_multip.py --speaker id --lang id
 #python eval.py

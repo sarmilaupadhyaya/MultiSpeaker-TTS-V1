@@ -104,13 +104,17 @@ class GradTTS(BaseModule):
 
 
 
-        #print(g.shape, 'g dim')
+        print(g1.shape, 'g1 dim')
+        print(g2.shape, 'g2 dim')
+
         x, x_lengths, g1, g2 = self.relocate_input([x, x_lengths, g1, g2])
         #################
         # permute before or after depending on 'id' or 'embedding'
         if g1 is not None:
             if self.speaker_representation == 'id':
-                g1 = F.normalize(self.emb_g1(g1)).permute(0,2,1)#.unsqueeze(-1)
+                result = self.emb_g1(g1)
+                print(result.shape)
+                g1 = F.normalize(result).permute(0,2,1)#.unsqueeze(-1)
             else:
                 g1 = F.normalize(self.emb_g1(g1.permute(0,2,1)))#.unsqueeze(-1)
 
@@ -119,6 +123,7 @@ class GradTTS(BaseModule):
             if self.language_representation == 'id':
                 g2 = F.normalize(self.emb_g2(g2)).permute(0,2,1)#.unsqueeze(-1)
             else:
+                print(g2.shape)
                 g2 = F.normalize(self.emb_g2(g2.permute(0,2,1)))#.unsqueeze(-1)
             #print(g2.shape, 'output shape of encoding 16, 1, 80')
         #################

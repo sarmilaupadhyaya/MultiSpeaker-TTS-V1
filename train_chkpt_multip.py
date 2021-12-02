@@ -118,7 +118,7 @@ def run_train(rank, n_gpus):
     if rank == 0:
         test_dataset = TextMelMultispeakerDataset(valid_filelist_path, cmudict_path, add_blank)
         print('Logging test batch...')
-        test_batch = test_dataset.sample_test_batch(size=params.test_size)
+        test_batch = test_dataset.sample_test_batch(size=params.batch_size)
         for i, item in enumerate(test_batch):
             mel = item['y']
             logger.add_image(f'image_{i}/ground_truth', plot_tensor(mel.squeeze()),
@@ -231,24 +231,43 @@ def run_train(rank, n_gpus):
                 continue
             if rank == 0:
                 model.eval()
+                test_sampler = torch.utils.data.distributed.DistributedSampler(test_dataset,num_replicas=n_gpus,rank=rank,shuffle=True)
+                batch_collate_test = TextMelMultispeakerBatchCollate()
+                loader_test = DataLoader(dataset=test_dataset, batch_size=params.batch_size,
+                        collate_fn=batch_collate_test, drop_last=True,
+                        num_workers=4, shuffle=False, sampler=test_sampler)
+
                 with torch.no_grad():
-                    for i, item in enumerate(test_batch):
-                        x = item['x'].to(torch.long).unsqueeze(0).cuda(rank, non_blocking=True)
-                        x_lengths = torch.LongTensor([x.shape[-1]]).cuda(rank, non_blocking=True)
+                    iter_test = iter(loader_test)
+                    for i in range(len(test_dataset)//batch_size):
+
+                        try:
+                            item = next(iter_test)
+                            print(len(item))
+                            if len(item) < params.batch_size:
+                                break;
+                        except StopIteration:
+                            continue
+
+                        x = item['x'].cuda(rank, non_blocking=True)
+                        x_lengths = item['x_lengths'].cuda(rank, non_blocking=True)
                         #######################
                         # choose the correct representation for the language and speaker
                         if speaker_representation == 'id':
-                            g1 = item['sid'].unsqueeze(0).cuda(rank, non_blocking=True)
+                            g1 = item['sid'].cuda(rank, non_blocking=True)
+                            #g1 = item['sid'].unsqueeze(0).cuda(rank, non_blocking=True)
                         else:
-                            g1 = item['y'].unsqueeze(0).cuda(rank, non_blocking=True)
+                            g1 = item['y'].cuda(rank, non_blocking=True)
+                            #g1 = item['y'].unsqueeze(0).cuda(rank, non_blocking=True)
                             #item['y'].unsqueeze(0).cuda()
                         if language_representation == 'id':
-                            g2 = item['lid'].unsqueeze(0).cuda(rank, non_blocking=True)
+                            g2 = item['lid'].cuda(rank)
                         else:
-                            g2 = item['y'].unsqueeze(0).cuda(rank, non_blocking=True)
+                            g2 =item['y'].cuda(rank)
                         #########################
 
                         #print(g.shape, 'sid')
+                        print(x.shape, x_lengths.shape, g1.shape, g2.shape)
                         y_enc, y_dec, attn = model(x, x_lengths, n_timesteps=50, g1=g1, g2=g2)
                         logger.add_image(f'image_{i}/generated_enc',
                                  plot_tensor(y_enc.squeeze().cpu()),

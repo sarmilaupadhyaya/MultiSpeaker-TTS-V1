@@ -12,7 +12,7 @@ from feature_extraction import pipeline
 _curly_re = re.compile(r'(.*?)\{(.+?)\}(.*)')
 
 # saving symbol to id for inference as everytime we run this file, the order is changed.
-with open('../text/_symbol_to_id.pickle', 'rb') as handle:
+with open('text/_symbol_to_id.pickle', 'rb') as handle:
     _symbol_to_id = pickle.load(handle)
     _id_to_symbol = {i: s for s,i in _symbol_to_id.items()}
 

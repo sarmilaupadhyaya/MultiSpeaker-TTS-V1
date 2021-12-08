@@ -18,7 +18,7 @@ n_feats = 80
 add_blank = False
 
 # multispeaker
-n_speakers =7 #n_Speakers+1
+n_speakers =12 #n_Speakers+1
 gin_channels_spk = 80
 # expressive
 #n_emotions = 5# n_emotions + 1, 
@@ -52,3 +52,4 @@ learning_rate = 1e-4
 seed = 37
 save_every = 1
 out_size = fix_len_compatibility(2*22050//256)
+language_id = {0:"fr", 1:"en"}

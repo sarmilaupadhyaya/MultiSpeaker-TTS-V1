@@ -17,9 +17,9 @@ class Preprocessing:
 
         """
         print("Input:", text)
-        self.input_var = "tmp/input.txt"
-        self.output_var = "tmp/output.txt"
-        self.phoneme_out = "tmp/phoneme_out.txt"
+        self.input_var = "feature_extraction/tmp/input.txt"
+        self.output_var = "feature_extraction/tmp/output.txt"
+        self.phoneme_out = "feature_extraction/tmp/phoneme_out.txt"
         self.id_to_phoneme = {v:k for k,v in phoneme_dictionary.items()}
         self.text = text
         self.language=language
@@ -55,10 +55,10 @@ class Preprocessing:
         ## put text in a temp file and get the output and selete the temp file
         ## run the pearl script
         if self.language=="fr":
-            print("./get_phonemes.pl "+ self.input_var +" texts hts run > "+ self.output_var)
-            pipe = subprocess.Popen(["./get_phonemes.pl "+ self.input_var +" texts hts run > "+ self.output_var],stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True )
+            print("./feature_extraction/get_phonemes.pl "+ self.input_var +" texts hts run > "+ self.output_var)
+            pipe = subprocess.Popen(["./feature_extraction/get_phonemes.pl "+ self.input_var +" texts hts run > "+ self.output_var],stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True )
             output, errors = pipe.communicate()
-            pipe = subprocess.Popen(["python3 extract_phonemes.py  --input "+ self.output_var +" --output "+ self.phoneme_out],stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True )
+            pipe = subprocess.Popen(["python3 feature_extraction/extract_phonemes.py  --input "+ self.output_var +" --output "+ self.phoneme_out],stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True )
             output, errors = pipe.communicate()
 
             #result = self.sequence_to_integer()

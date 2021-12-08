@@ -50,13 +50,15 @@ def main(filepath, language, speakerid, langid):
     print(language, speakerid, langid)
     f = open("../resources/filelists/final3_" +filepath, "w")
     for line in open(filelists_path, 'r'):
-        fpath = line.strip().split('|')[0]
+        fpath =ry line.strip().split('|')[0]
         text = line.strip().split('|')[1]
         melspec = get_mel(fpath)
-        print(fpath.replace('.wav', '.npy'))
+        fpath = "/".join(fpath.split("/")[:-2])+"/"+fpath.split("/")[-1]
+        print(fpath.replace('.wav', '/npys/.npy'))
         np.save(fpath.replace('.wav', '.npy'), melspec)
-        #p = pipeline.Preprocessing(text, dictionary, language="en")
+        p = pipeline.Preprocessing(text, dictionary, language="en")
         seq = [str(each) for each in text_to_sequence(text, dictionary=dictionary, language=language)]
+        print(seq)
         if seq is None:
             import pdb
             pdb.set_trace()

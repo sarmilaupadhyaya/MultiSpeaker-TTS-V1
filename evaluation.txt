@@ -1,0 +1,12 @@
+audio1.pt.npy|this is the test for speaker transformation.|en|10|1
+audio1.pt.npy|this is the test for speaker transformation.|en|0|1
+audio1.pt.npy|this is the test for speaker transformation.|en|7|1
+audio1.pt.npy|this is the test for speaker transformation.|en|8|1
+audio1.pt.npy|this is the test for speaker transformation.|en|9|1
+audio1.pt.npy|this is the test for speaker transformation.|en|11|1
+audio2.pt.npy|c'est le test pour la transformation du locuteur.|fr|1|0
+audio2.pt.npy|c'est le test pour la transformation du locuteur.|fr|2|0
+audio2.pt.npy|c'est le test pour la transformation du locuteur.|fr|3|0
+audio2.pt.npy|c'est le test pour la transformation du locuteur.|fr|4|0
+audio2.pt.npy|c'est le test pour la transformation du locuteur.|fr|5|0
+audio2.pt.npy|c'est le test pour la transformation du locuteur.|fr|6|0

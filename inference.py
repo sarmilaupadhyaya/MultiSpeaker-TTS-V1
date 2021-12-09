@@ -25,12 +25,15 @@ import sys
 sys.path.append('./hifi-gan/')
 from env import AttrDict
 from models import Generator as HiFiGAN
+from model.utils import fix_len_compatibility
 from text import text_to_sequence
 
 df = pd.read_csv("feature_extraction/phonemes.csv", header=None)
 df.columns=["phoneme", "id"]
 dictionary = {row["phoneme"]:row["id"] for index, row in df.iterrows()}
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
+
 
 def get_text(text, language,add_blank=True):
 
@@ -47,12 +50,6 @@ def load_checkpoint(checkpoint_path, model, optimizer=None):
     assert os.path.isfile(checkpoint_path)
     checkpoint_dict = torch.load(checkpoint_path, map_location='cpu')
     iteration = 1
-   # if 'iteration' in checkpoint_dict.keys():
-    #    iteration = checkpoint_dict['iteration']
-    #if 'learning_rate' in checkpoint_dict.keys():
-    #    learning_rate = checkpoint_dict['learning_rate']
-    #if optimizer is not None and 'optimizer' in checkpoint_dict.keys():
-    #    optimizer.load_state_dict(checkpoint_dict['optimizer'])
     saved_state_dict = checkpoint_dict['model']
     if hasattr(model, 'module'):
         state_dict = model.module.state_dict()
@@ -81,26 +78,33 @@ def get_id(id_):
 
 HIFIGAN_CONFIG = './checkpts/hifigan-config.json'
 HIFIGAN_CHECKPT = './checkpts/hifigan.pt'
-grad_checkpoint_1 = 'chkpt/speaker_id_lang_id/G_516.pth'
-grad_checkpoint_2 = 'chkpt/speaker_embedding_lang_id/G_380.pth'
-grad_checkpoint_3 = 'chkpt/speaker_id_lang_embedding/G_518.pth'
-grad_checkpoint_4 = 'chkpt/speaker_embedding_lang_embedding/G_460.pth'
-outpath_1 = 'results/baseline_v1'
-outpath_2 = 'results/baseline_v2'
-outpath_3 = 'results/baseline_v3'
-outpath_4 = 'results/baseline_v4'
+grad_checkpoint_1 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/speaker_id_lang_id/G_516.pth'
+grad_checkpoint_2 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/speaker_embedding_lang_id/G_380.pth'
+grad_checkpoint_3 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/speaker_id_lang_embedding/G_518.pth'
+grad_checkpoint_4 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/speaker_embedding_lang_embedding/G_460.pth'
+outpath_1 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/baseline_v1'
+outpath_2 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/baseline_v2'
+outpath_3 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/baseline_v3'
+outpath_4 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/baseline_v4'
 sample_lang={0:"sample/audio_lang_0.npy", 1:"sample/audio_lang_1.npy"}
 sample_speaker = "sample/audio_speaker"
 
 
-def get_mel(self, filepath):
+def get_mel( filepath):
+    
 
     mel = np.load(filepath, allow_pickle=True)
-    return mel
+    mel = np.expand_dims(mel, axis=0)
+    B = len(mel)
+    y_max_length = max([item.shape[-1] for item in mel])
+    y_max_length = fix_len_compatibility(y_max_length)
+    n_feats = mel[0].shape[-2]
+    y = torch.zeros((B, n_feats, y_max_length), dtype=torch.float32)
+    return y
 
 def get_mel_speaker(id):
 
-    return get_mel(sample_speaker+str(id)+".npy")
+    return get_mel(sample_speaker+"_"+str(id)+".npy")
 
 def get_mel_language(id):
 
@@ -119,8 +123,6 @@ if __name__ == '__main__':
 
     nsymbols = len(symbols) + 1 if params.add_blank else len(symbols)
     version = args.version
-    import pdb
-    pdb.set_trace()
     # checkpoint path according to version selection
     if version == "1":
         grad_checkpoint =  grad_checkpoint_1
@@ -187,7 +189,6 @@ if __name__ == '__main__':
             language = languages[i]
             print(language)
             x = get_text(text,language,params.add_blank).unsqueeze(0).cuda()
-            
             x_lengths = torch.LongTensor([x.shape[-1]]).cuda()
             
             # switching the model
@@ -195,12 +196,12 @@ if __name__ == '__main__':
                 g1 = torch.LongTensor(get_id(int(sids[i]))).unsqueeze(0).cuda()
                 g2 = torch.LongTensor(get_id(int(lids[i]))).unsqueeze(0).cuda()
             elif version == "2":
-                g2 =  torch.LongTensor(get_mel_speaker(int(sids[i]))).unsqueeze(0).cuda()
+                g1 =get_mel_speaker(int(sids[i])).cuda()
                 g2 = torch.LongTensor(get_id(int(lids[i]))).unsqueeze(0).cuda()
 
             elif version == "3":
                 g1 = torch.LongTensor(get_id(int(sids[i]))).unsqueeze(0).cuda()
-                g2 = torch.LongTensor(get_mel_langauge(int(lids[i]))).unsqueeze(0).cuda()
+                g2 = get_mel_langauge(int(lids[i])).unsqueeze(0).cuda()
                 pass
             elif version == "4":
                 g1 =  torch.LongTensor(get_mel_speaker(int(sids[i]))).unsqueeze(0).cuda()

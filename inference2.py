@@ -80,14 +80,14 @@ HIFIGAN_CONFIG = './checkpts/hifigan-config.json'
 HIFIGAN_CHECKPT = './checkpts/hifigan.pt'
 grad_checkpoint_1 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/speaker_id_lang_id/G_516.pth'
 d_checkpoint = "/mnt/d/chkpt/speaker_id_lang_id/G_516.pth"
-grad_checkpoint_2 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/speaker_embedding_lang_id/G_380.pth'
-grad_checkpoint_3 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/speaker_id_lang_embedding/G_518.pth'
-grad_checkpoint_4 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/speaker_embedding_lang_embedding/G_460.pth'
-local_out = "out"
-outpath_1 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/baseline_v1'
-outpath_2 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/baseline_v2'
-outpath_3 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/baseline_v3'
-outpath_4 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/baseline_v4'
+grad_checkpoint_1 = '/mnt/d/chkpt/speaker_id_lang_id/G_516.pth'
+grad_checkpoint_2 = '/mnt/d/chkpt/speaker_embedding_lang_id/G_380.pth'
+grad_checkpoint_3 = '/mnt/d/chkpt/speaker_id_lang_embedding/G_518.pth'
+grad_checkpoint_4 = '/mnt/d/chkpt/speaker_embedding_lang_embedding/G_460.pth'
+outpath_1 = 'out/baseline_v1'
+outpath_2 = 'out/baseline_v2'
+outpath_3 = 'out/baseline_v3'
+outpath_4 = 'out/baseline_v4'
 sample_lang={0:"sample/audio_lang_0.npy", 1:"sample/audio_lang_1.npy"}
 sample_speaker = "sample/audio_speaker"
 
@@ -127,7 +127,7 @@ if __name__ == '__main__':
     version = args.version
     # checkpoint path according to version selection
     if version == "1":
-        grad_checkpoint =  d_checkpoint#grad_checkpoint_1
+        grad_checkpoint =  grad_checkpoint_1
         outpath = outpath_1
         speaker_rep = "id"
         lang_rep = "id"
@@ -152,8 +152,8 @@ if __name__ == '__main__':
     else:
         import sys
         sys.exit("No such version of model available")
-    if not os.path.exists(local_out):
-        os.mkdir(local_out)
+    if not os.path.exists(outpath):
+        os.mkdir(outpath)
     
     print('Initializing Grad-TTS...')
     generator = GradTTS(nsymbols, params.n_enc_channels, params.filter_channels,
@@ -221,6 +221,6 @@ if __name__ == '__main__':
 
             audio = (vocoder.forward(y_dec).cpu().squeeze().clamp(-1, 1).numpy() * 32768).astype(np.int16)
             
-            write(os.path.join(local_out, speaker_tag+'_'+lang_tag+'_'+fnames[i]), 22050, audio)
+            write(os.path.join(outpath, speaker_tag+'_'+lang_tag+'_'+fnames[i]), 22050, audio)
 
     print('Done. Check out `out` folder for samples.')

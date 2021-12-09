@@ -201,11 +201,11 @@ if __name__ == '__main__':
 
             elif version == "3":
                 g1 = torch.LongTensor(get_id(int(sids[i]))).unsqueeze(0).cuda()
-                g2 = get_mel_langauge(int(lids[i])).unsqueeze(0).cuda()
+                g2 = get_mel_language(int(lids[i])).cuda()
                 pass
             elif version == "4":
-                g1 =  torch.LongTensor(get_mel_speaker(int(sids[i]))).unsqueeze(0).cuda()
-                g2 = torch.LongTensor(get_mel_langauge(int(lids[i]))).unsqueeze(0).cuda()
+                g1 =  get_mel_speaker(int(sids[i])).cuda()
+                g2 = get_mel_language(int(lids[i])).cuda()
 
 
 

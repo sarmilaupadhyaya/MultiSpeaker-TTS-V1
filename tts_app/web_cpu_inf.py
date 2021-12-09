@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Nov 28 20:26:48 2021
-
-@author: rasul
-"""
 # Copyright (C) 2021. Huawei Technologies Co., Ltd. All rights reserved.
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the MIT License.
@@ -17,7 +11,7 @@ import json
 import datetime as dt
 import numpy as np
 from scipy.io.wavfile import write
-
+import os
 import torch
 
 import params
@@ -25,11 +19,63 @@ from model import GradTTS
 from text import text_to_sequence, cmudict
 from text.symbols import symbols
 from utils import intersperse
+import pandas as pd
 
 import sys
 sys.path.append('./hifi-gan/')
 from env import AttrDict
 from models import Generator as HiFiGAN
+from text import text_to_sequence
+
+df = pd.read_csv("feature_extraction/phonemes.csv", header=None)
+df.columns=["phoneme", "id"]
+dictionary = {row["phoneme"]:row["id"] for index, row in df.iterrows()}
+
+
+def get_text(text, language,add_blank=True):
+
+    seq = [str(each) for each in text_to_sequence(text, dictionary=dictionary, language=language)]
+    text_norm = torch.from_numpy(np.asanyarray(seq, dtype=np.int)).type(torch.int32)
+    if add_blank:
+        text_norm = intersperse(text_norm, 200)  # add a blank token, whose id number is len(symbols)
+    text_norm = torch.IntTensor(text_norm)
+    return text_norm
+
+
+def load_checkpoint(checkpoint_path, model, optimizer=None):
+    assert os.path.isfile(checkpoint_path)
+    checkpoint_dict = torch.load(checkpoint_path, map_location='cpu')
+    iteration = 1
+   # if 'iteration' in checkpoint_dict.keys():
+    #    iteration = checkpoint_dict['iteration']
+    #if 'learning_rate' in checkpoint_dict.keys():
+    #    learning_rate = checkpoint_dict['learning_rate']
+    #if optimizer is not None and 'optimizer' in checkpoint_dict.keys():
+    #    optimizer.load_state_dict(checkpoint_dict['optimizer'])
+    saved_state_dict = checkpoint_dict['model']
+    if hasattr(model, 'module'):
+        state_dict = model.module.state_dict()
+    else:
+        state_dict = model.state_dict()
+    new_state_dict= {}
+    for k, v in state_dict.items():
+        try:
+            new_state_dict[k] = saved_state_dict[k]
+        except:
+            logger.info("%s is not in the checkpoint" % k)
+            new_state_dict[k] = v
+    if hasattr(model, 'module'):
+        model.module.load_state_dict(new_state_dict)
+    else:
+        model.load_state_dict(new_state_dict)
+    print("Loaded checkpoint '{}' (iteration {})" .format(
+                      checkpoint_path, iteration))
+    return model
+
+def get_id(id_):
+
+    id_ = torch.LongTensor([int(id_)])
+    return id_
 
 
 HIFIGAN_CONFIG = './checkpts/hifigan-config.json'

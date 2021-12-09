@@ -26,11 +26,30 @@ sys.path.append('./hifi-gan/')
 from env import AttrDict
 from models import Generator as HiFiGAN
 from text import text_to_sequence
+import logging as logger
 
 df = pd.read_csv("feature_extraction/phonemes.csv", header=None)
 df.columns=["phoneme", "id"]
 dictionary = {row["phoneme"]:row["id"] for index, row in df.iterrows()}
 
+
+HIFIGAN_CONFIG = './checkpts/hifigan-config.json'
+HIFIGAN_CHECKPT = './checkpts/hifigan.pt'
+sample_lang={0:"sample/audio_lang_0.npy", 1:"sample/audio_lang_1.npy"}
+sample_speaker = "sample/audio_speaker"
+
+def get_mel(self, filepath):
+
+    mel = np.load(filepath, allow_pickle=True)
+    return mel
+
+def get_mel_speaker(id):
+
+    return get_mel(sample_speaker+str(id)+".npy")
+
+def get_mel_language(id):
+
+    return get_mel(sample_lang[id])
 
 def get_text(text, language,add_blank=True):
 
@@ -40,7 +59,6 @@ def get_text(text, language,add_blank=True):
         text_norm = intersperse(text_norm, 200)  # add a blank token, whose id number is len(symbols)
     text_norm = torch.IntTensor(text_norm)
     return text_norm
-
 
 def load_checkpoint(checkpoint_path, model, optimizer=None):
     assert os.path.isfile(checkpoint_path)
@@ -72,43 +90,18 @@ def load_checkpoint(checkpoint_path, model, optimizer=None):
                       checkpoint_path, iteration))
     return model
 
-def get_id(id_):
-
-    id_ = torch.LongTensor([int(id_)])
-    return id_
-
-
-HIFIGAN_CONFIG = './checkpts/hifigan-config.json'
-HIFIGAN_CHECKPT = './checkpts/hifigan.pt'
-grad_checkpoint = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/speaker_id_lang_id/G_229.pth'
-outpath = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/baseline_v1'
-
-if os.path.exists(outpath) == False:
-    os.mkdir(outpath)
-
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-f', '--file', type=str, required=True, help='path to a file with texts to synthesize')
-    #parser.add_argument('-s', '--speaker', type=str, required=True, help='path to a file with texts to synthesize')
-    #parser.add_argument('-e', '--emotion', type=str, required=True, help='path to a file with texts to synthesize')
-    #parser.add_argument('-o', '--outpath', type=str, required=True, help='path to a file with texts to synthesize')
-    #parser.add_argument('-c', '--checkpoint', type=str, required=True, help='path to a checkpoint of Grad-TTS')
-    parser.add_argument('-t', '--timesteps', type=int, required=False, default=1000, help='number of timesteps of reverse diffusion')
-    args = parser.parse_args()
-
-    nsymbols = len(symbols) + 1 if params.add_blank else len(symbols)
-    
+def load_grad_tts(checkpoint, nsymbols, speaker_rep, lang_rep):
     print('Initializing Grad-TTS...')
     generator = GradTTS(nsymbols, params.n_enc_channels, params.filter_channels,
                         params.filter_channels_dp, params.n_heads, params.n_enc_layers,
                         params.enc_kernel, params.enc_dropout, params.window_size,
-                        params.n_feats, params.dec_dim, params.beta_min, params.beta_max, params.pe_scale, params.n_speakers, params.n_langs, params.gin_channels_spk, params.gin_channels_langs, "id", "id")
-    #generator.load_state_dict(torch.load(grad_checkpoint, map_location=lambda loc, storage: loc))
-    load_checkpoint(grad_checkpoint, generator)
+                        params.n_feats, params.dec_dim, params.beta_min, params.beta_max, params.pe_scale, params.n_speakers, params.n_langs, params.gin_channels_spk, params.gin_channels_langs, speaker_rep, lang_rep)
+    load_checkpoint(checkpoint, generator)
     _ = generator.eval()
     print(f'Number of parameters: {generator.nparams}')
-    
+    return generator
+
+def load_hifi():
     print('Initializing HiFi-GAN...')
     with open(HIFIGAN_CONFIG) as f:
         h = AttrDict(json.load(f))
@@ -116,37 +109,34 @@ if __name__ == '__main__':
     vocoder.load_state_dict(torch.load(HIFIGAN_CHECKPT, map_location=lambda loc, storage: loc)['generator'])
     _ = vocoder.eval()
     vocoder.remove_weight_norm()
+    return vocoder
+
+def get_id(id_):
+
+    id_ = torch.LongTensor([int(id_)])
+    return id_
+
     
-    with open(args.file, 'r', encoding='utf-8') as f:
-        texts = [line.strip() for line in f.readlines()]
-    
-    fnames = [os.path.basename(line.strip().split('|')[0]).replace('.pt.npy', '.wav') for line in open(args.file, 'r')]
-    texts = [line.strip().split('|')[1] for line in open(args.file, 'r')]
-    sids = [line.strip().split('|')[3] for line in open(args.file, 'r')]
-    lids = [line.strip().split('|')[4] for line in open(args.file, 'r')]
-    languages = [line.strip().split('|')[2] for line in open(args.file ,'r')]
-    
-    #cmu = cmudict.CMUDict('./resources/cmu_dictionary')
-        
+def main(text, checkpt="/mnt/d/chkpt/speaker_id_lang_id/G_516.pth", timesteps=10, speaker_id=10, lang_id=1, language="fr", speaker_rep="id", lang_rep="id", outpath="out"):
+    nsymbols = len(symbols) + 1 if params.add_blank else len(symbols)
+    generator = load_grad_tts(checkpt, nsymbols, speaker_rep, lang_rep)
+    vocoder = load_hifi()
+    texts = [line.strip() for line in text.split("\n") if not line.isspace()]
+    cmu = cmudict.CMUDict('./resources/cmu_dictionary')
+    texts = [text]
     with torch.no_grad():
         for i, text in enumerate(texts):
             print(f'Synthesizing {i} text...', end=' ')
-            
-            speaker_tag=sids[i]
-            lang_tag=lids[i]
-            language = languages[i]
             print(language)
             x = get_text(text,language,params.add_blank).unsqueeze(0)
-            
             x_lengths = torch.LongTensor([x.shape[-1]])
             
-            g1 = torch.LongTensor(get_id(int(sids[i]))).unsqueeze(0)
-            g2 = torch.LongTensor(get_id(int(lids[i]))).unsqueeze(0)
-            #g2 = torch.LongTensor(get_id(int(6))).unsqueeze(0)
+            g1 = torch.LongTensor(get_id(int(speaker_id))).unsqueeze(0)
+            g2 = torch.LongTensor(get_id(int(lang_id))).unsqueeze(0)
             print(x.shape, x_lengths, g1.shape, g2.shape)
             
             t = dt.datetime.now()
-            y_enc, y_dec, attn = generator.forward(x, x_lengths, n_timesteps=args.timesteps, temperature=1.5,
+            y_enc, y_dec, attn = generator.forward(x, x_lengths, n_timesteps=timesteps, temperature=1.5,
                                                    stoc=False, length_scale=0.91, g1=g1, g2=g2)
             t = (dt.datetime.now() - t).total_seconds()
             print(f'Grad-TTS RTF: {t * 22050 / (y_dec.shape[-1] * 256)}')
@@ -155,6 +145,9 @@ if __name__ == '__main__':
             import pdb
             pdb.set_trace()
             
-            write(os.path.join(outpath, speaker_tag+'_'+lang_tag+'_'+fnames[i]), 22050, audio)
+            write(os.path.join(outpath, speaker_id+'_'+lang_id+'_'+str(i)), 22050, audio)
 
     print('Done. Check out `out` folder for samples.')
+if __name__ == '__main__':
+    main("Moi, je préfère la guerre. Je me prepare pour la guerre quand même.")
+

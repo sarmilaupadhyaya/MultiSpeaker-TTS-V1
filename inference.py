@@ -30,7 +30,7 @@ from text import text_to_sequence
 df = pd.read_csv("feature_extraction/phonemes.csv", header=None)
 df.columns=["phoneme", "id"]
 dictionary = {row["phoneme"]:row["id"] for index, row in df.iterrows()}
-
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 def get_text(text, language,add_blank=True):
 
@@ -43,6 +43,7 @@ def get_text(text, language,add_blank=True):
 
 
 def load_checkpoint(checkpoint_path, model, optimizer=None):
+    print(checkpoint_path)
     assert os.path.isfile(checkpoint_path)
     checkpoint_dict = torch.load(checkpoint_path, map_location='cpu')
     iteration = 1
@@ -80,11 +81,30 @@ def get_id(id_):
 
 HIFIGAN_CONFIG = './checkpts/hifigan-config.json'
 HIFIGAN_CHECKPT = './checkpts/hifigan.pt'
-grad_checkpoint = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/speaker_id_lang_id/G_416.pth'
-outpath = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/baseline_v1'
+grad_checkpoint_1 = 'chkpt/speaker_id_lang_id/G_516.pth'
+grad_checkpoint_2 = 'chkpt/speaker_embedding_lang_id/G_380.pth'
+grad_checkpoint_3 = 'chkpt/speaker_id_lang_embedding/G_518.pth'
+grad_checkpoint_4 = 'chkpt/speaker_embedding_lang_embedding/G_460.pth'
+outpath_1 = 'results/baseline_v1'
+outpath_2 = 'results/baseline_v2'
+outpath_3 = 'results/baseline_v3'
+outpath_4 = 'results/baseline_v4'
+sample_lang={0:"sample/audio_lang_0.npy", 1:"sample/audio_lang_1.npy"}
+sample_speaker = "sample/audio_speaker"
 
-if os.path.exists(outpath) == False:
-    os.mkdir(outpath)
+
+def get_mel(self, filepath):
+
+    mel = np.load(filepath, allow_pickle=True)
+    return mel
+
+def get_mel_speaker(id):
+
+    return get_mel(sample_speaker+str(id)+".npy")
+
+def get_mel_language(id):
+
+    return get_mel(sample_lang[id])
 
 
 if __name__ == '__main__':
@@ -93,17 +113,49 @@ if __name__ == '__main__':
     #parser.add_argument('-s', '--speaker', type=str, required=True, help='path to a file with texts to synthesize')
     #parser.add_argument('-e', '--emotion', type=str, required=True, help='path to a file with texts to synthesize')
     #parser.add_argument('-o', '--outpath', type=str, required=True, help='path to a file with texts to synthesize')
-    #parser.add_argument('-c', '--checkpoint', type=str, required=True, help='path to a checkpoint of Grad-TTS')
+    parser.add_argument('-v', '--version', type=str, required=True, help='version you want to use')
     parser.add_argument('-t', '--timesteps', type=int, required=False, default=1000, help='number of timesteps of reverse diffusion')
     args = parser.parse_args()
 
     nsymbols = len(symbols) + 1 if params.add_blank else len(symbols)
+    version = args.version
+    import pdb
+    pdb.set_trace()
+    # checkpoint path according to version selection
+    if version == "1":
+        grad_checkpoint =  grad_checkpoint_1
+        outpath = outpath_1
+        speaker_rep = "id"
+        lang_rep = "id"
+    elif version == "2":
+
+        grad_checkpoint =  grad_checkpoint_2
+        outpath = outpath_2
+        speaker_rep = "embedding"
+        lang_rep = "id"
+
+    elif version == "3":
+        grad_checkpoint =  grad_checkpoint_3
+        outpath = outpath_3
+        speaker_rep = "id"
+        lang_rep = "embedding"
+
+    elif version == "4":
+        grad_checkpoint =  grad_checkpoint_4
+        outpath = outpath_4
+        speaker_rep = "embedding"
+        lang_rep = "embedding"
+    else:
+        import sys
+        sys.exit("No such version of model available")
+    if os.path.exists(outpath) == False:
+        os.mkdir(outpath)
     
     print('Initializing Grad-TTS...')
     generator = GradTTS(nsymbols, params.n_enc_channels, params.filter_channels,
                         params.filter_channels_dp, params.n_heads, params.n_enc_layers,
                         params.enc_kernel, params.enc_dropout, params.window_size,
-                        params.n_feats, params.dec_dim, params.beta_min, params.beta_max, params.pe_scale, params.n_speakers, params.n_langs, params.gin_channels_spk, params.gin_channels_langs, "id", "id")
+                        params.n_feats, params.dec_dim, params.beta_min, params.beta_max, params.pe_scale, params.n_speakers, params.n_langs, params.gin_channels_spk, params.gin_channels_langs, speaker_rep, lang_rep)
     #generator.load_state_dict(torch.load(grad_checkpoint, map_location=lambda loc, storage: loc))
     load_checkpoint(grad_checkpoint, generator)
     _ = generator.cuda().eval()
@@ -126,8 +178,6 @@ if __name__ == '__main__':
     lids = [line.strip().split('|')[4] for line in open(args.file, 'r')]
     languages = [line.strip().split('|')[2] for line in open(args.file ,'r')]
     
-    #cmu = cmudict.CMUDict('./resources/cmu_dictionary')
-        
     with torch.no_grad():
         for i, text in enumerate(texts):
             print(f'Synthesizing {i} text...', end=' ')
@@ -140,9 +190,24 @@ if __name__ == '__main__':
             
             x_lengths = torch.LongTensor([x.shape[-1]]).cuda()
             
-            g1 = torch.LongTensor(get_id(int(sids[i]))).unsqueeze(0).cuda()
-            g2 = torch.LongTensor(get_id(int(lids[i]))).unsqueeze(0).cuda()
-            #g2 = torch.LongTensor(get_id(int(6))).unsqueeze(0).cuda()
+            # switching the model
+            if version == "1":
+                g1 = torch.LongTensor(get_id(int(sids[i]))).unsqueeze(0).cuda()
+                g2 = torch.LongTensor(get_id(int(lids[i]))).unsqueeze(0).cuda()
+            elif version == "2":
+                g2 =  torch.LongTensor(get_mel_speaker(int(sids[i]))).unsqueeze(0).cuda()
+                g2 = torch.LongTensor(get_id(int(lids[i]))).unsqueeze(0).cuda()
+
+            elif version == "3":
+                g1 = torch.LongTensor(get_id(int(sids[i]))).unsqueeze(0).cuda()
+                g2 = torch.LongTensor(get_mel_langauge(int(lids[i]))).unsqueeze(0).cuda()
+                pass
+            elif version == "4":
+                g1 =  torch.LongTensor(get_mel_speaker(int(sids[i]))).unsqueeze(0).cuda()
+                g2 = torch.LongTensor(get_mel_langauge(int(lids[i]))).unsqueeze(0).cuda()
+
+
+
             print(x.shape, x_lengths, g1.shape, g2.shape)
             
             t = dt.datetime.now()
@@ -152,8 +217,6 @@ if __name__ == '__main__':
             print(f'Grad-TTS RTF: {t * 22050 / (y_dec.shape[-1] * 256)}')
 
             audio = (vocoder.forward(y_dec).cpu().squeeze().clamp(-1, 1).numpy() * 32768).astype(np.int16)
-            import pdb
-            pdb.set_trace()
             
             write(os.path.join(outpath, speaker_tag+'_'+lang_tag+'_'+fnames[i]), 22050, audio)
 

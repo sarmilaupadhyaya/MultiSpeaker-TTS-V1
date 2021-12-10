@@ -40,11 +40,12 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"],arpabet_dict=None,
       List of integers corresponding to the symbols in the text
     '''
     sequence = []
-
     if language == "fr":
+       print("converting French")
        p = pipeline.Preprocessing(text, dictionary, language="fr").get_sequence()
        for t in p:
            sequence += _symbols_to_sequence_french(t)
+       print(sequence)
        return sequence
            
 

@@ -39,26 +39,21 @@ sample_lang={0:"sample/audio_lang_0.npy", 1:"sample/audio_lang_1.npy"}
 sample_speaker = "sample/audio_speaker"
 
 def get_mel(self, filepath):
-
     mel = np.load(filepath, allow_pickle=True)
     return mel
 
 def get_mel_speaker(id):
-
     return get_mel(sample_speaker+str(id)+".npy")
 
 def get_mel_language(id):
-
     return get_mel(sample_lang[id])
 
 def get_text(text, language,add_blank=True):
-
+    print(language)
     seq = [str(each) for each in text_to_sequence(text, dictionary=dictionary, language=language)]
     text_norm = torch.from_numpy(np.asanyarray(seq, dtype=np.int)).type(torch.int32)
-    print(text_norm.shape)
     if add_blank:
         text_norm = intersperse(text_norm, 200)  # add a blank token, whose id number is len(symbols)
-    print(text_norm.shape)
     text_norm = torch.IntTensor(text_norm)
     return text_norm
 

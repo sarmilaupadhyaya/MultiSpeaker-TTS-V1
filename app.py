@@ -5,9 +5,7 @@ Created on Tue Oct 12 10:30:35 2021
 @author: rasul
 
 """
-from flask import Flask, render_template, request, send_file, send_from_directory
-import os
-from os.path import exists
+from flask import Flask, render_template, request, send_from_directory
 from web_cpu_inf import main as inf
 
 app = Flask(__name__)

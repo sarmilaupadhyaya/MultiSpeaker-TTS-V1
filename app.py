@@ -34,9 +34,9 @@ def home():
     else:
         return render_template("home.html")
     
-@app.route("/out/latest.wav", methods = ['GET'])
+@app.route("/out/web/latest.wav", methods = ['GET'])
 def read():
-    return send_from_directory(directory="out", filename="latest.wav", cache_timeout=0)
+    return send_from_directory(directory="out/web/", filename="latest.wav", cache_timeout=0)
 
 
 if __name__ == "__main__":

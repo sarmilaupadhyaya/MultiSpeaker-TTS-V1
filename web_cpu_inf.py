@@ -55,8 +55,10 @@ def get_text(text, language,add_blank=True):
 
     seq = [str(each) for each in text_to_sequence(text, dictionary=dictionary, language=language)]
     text_norm = torch.from_numpy(np.asanyarray(seq, dtype=np.int)).type(torch.int32)
+    print(text_norm.shape)
     if add_blank:
         text_norm = intersperse(text_norm, 200)  # add a blank token, whose id number is len(symbols)
+    print(text_norm.shape)
     text_norm = torch.IntTensor(text_norm)
     return text_norm
 
@@ -116,7 +118,8 @@ def get_id(id_):
     return id_
 
     
-def main(text, checkpt="/mnt/d/chkpt/speaker_id_lang_id/G_516.pth", timesteps=10, speaker_id=2, lang_id=0, language="en", speaker_rep="id", lang_rep="id", outpath="out/web"):
+#if using checkpts frm flashdrive, mount the D drive first
+def main(text, checkpt="/mnt/d/chkpt/speaker_id_lang_id/G_516.pth", timesteps=10, speaker_id=2, lang_id=1, language="en", speaker_rep="id", lang_rep="id", outpath="out/web"):
     nsymbols = len(symbols) + 1 if params.add_blank else len(symbols)
     generator = load_grad_tts(checkpt, nsymbols, speaker_rep, lang_rep)
     vocoder = load_hifi()
@@ -145,5 +148,5 @@ def main(text, checkpt="/mnt/d/chkpt/speaker_id_lang_id/G_516.pth", timesteps=10
     print('Done. Check out `out` folder for samples.')
 if __name__ == '__main__':
     for i in range(10):
-        main("This is an English test. I will speak two sentences. Have a nice day.", speaker_id=i)
+        main("Il neige aujourd'hui. Moi, j'aime pas du tout la neige", lang_id=0, language="fr", speaker_id=i)
 

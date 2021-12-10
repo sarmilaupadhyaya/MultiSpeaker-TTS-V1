@@ -112,21 +112,19 @@ def load_hifi():
     return vocoder
 
 def get_id(id_):
-
     id_ = torch.LongTensor([int(id_)])
     return id_
 
     
-def main(text, checkpt="/mnt/d/chkpt/speaker_id_lang_id/G_516.pth", timesteps=10, speaker_id=10, lang_id=1, language="fr", speaker_rep="id", lang_rep="id", outpath="out"):
+def main(text, checkpt="/mnt/d/chkpt/speaker_id_lang_id/G_516.pth", timesteps=10, speaker_id=2, lang_id=0, language="en", speaker_rep="id", lang_rep="id", outpath="out"):
     nsymbols = len(symbols) + 1 if params.add_blank else len(symbols)
     generator = load_grad_tts(checkpt, nsymbols, speaker_rep, lang_rep)
     vocoder = load_hifi()
-    texts = [line.strip() for line in text.split("\n") if not line.isspace()]
     cmu = cmudict.CMUDict('./resources/cmu_dictionary')
     texts = [text]
     with torch.no_grad():
         for i, text in enumerate(texts):
-            print(f'Synthesizing {i} text...', end=' ')
+            print(f'Synthesizing...', end=' ')
             print(language)
             x = get_text(text,language,params.add_blank).unsqueeze(0)
             x_lengths = torch.LongTensor([x.shape[-1]])
@@ -142,12 +140,10 @@ def main(text, checkpt="/mnt/d/chkpt/speaker_id_lang_id/G_516.pth", timesteps=10
             print(f'Grad-TTS RTF: {t * 22050 / (y_dec.shape[-1] * 256)}')
 
             audio = (vocoder.forward(y_dec).cpu().squeeze().clamp(-1, 1).numpy() * 32768).astype(np.int16)
-            import pdb
-            pdb.set_trace()
-            
-            write(os.path.join(outpath, speaker_id+'_'+lang_id+'_'+str(i)), 22050, audio)
-
+            write(os.path.join(outpath, str(speaker_id)+'_'+str(lang_id) +".wav"), 22050, audio)
+            write(os.path.join(outpath, "latest" +".wav"), 22050, audio)
     print('Done. Check out `out` folder for samples.')
 if __name__ == '__main__':
-    main("Moi, je préfère la guerre. Je me prepare pour la guerre quand même.")
+    for i in range(10):
+        main("This is an English test. I will speak two sentences. Have a nice day.", speaker_id=i)
 

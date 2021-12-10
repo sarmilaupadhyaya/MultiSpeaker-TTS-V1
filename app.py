@@ -18,18 +18,25 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 def home():
     if request.method == "POST":
         language = request.form["text_lang"].lower()
-        voice_speaker = request.form["speaker"].lower()
+        lang_codes = {"fr" : 0, "en": 1}
+        lang_id = lang_codes[language]
+        speaker_id = int(request.form["speaker"])
+        #embedding reps don't work yet
+        lang_rep = request.form["lang_rep"]
+        speaker_rep = request.form["speaker_rep"]
         string = request.form["text"]
         diffusion = int(request.form["diffusion"])
         #accent
-        inf(string, "checkpts/grad-tts.pt", timesteps=diffusion)
+        inf(string, timesteps=diffusion, language=language,
+            lang_id=lang_id, speaker_id=speaker_id, 
+            speaker_rep=speaker_rep, lang_rep=lang_rep)
         return render_template("home.html")
     else:
         return render_template("home.html")
     
-@app.route("/out/sample_0.wav", methods = ['GET'])
+@app.route("/out/latest.wav", methods = ['GET'])
 def read():
-    return send_from_directory(directory="out", filename="sample_0.wav", cache_timeout=0)
+    return send_from_directory(directory="out", filename="latest.wav", cache_timeout=0)
 
 
 if __name__ == "__main__":

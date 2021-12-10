@@ -15,17 +15,31 @@
 	    <br><strong>English</strong> 
         </p>
 <form action="/" method = "post">
+<label for="text">Please provide the text you wish to hear.</label>
+    <br>
+    <textarea id="text" name="text">
+    </textarea><br><br>
 <label for="text_lang"  >Language of Text</label>
     <select name="text_lang" id="text_lang">
-      <option value="FR">French</option>
-      <option value="EN">English</option>
+      <! French not working yet>
+      <option value="en">English</option>
+    </select>
+    <br>
+<label for="lang_rep"  >Language Representation</label>
+    <select name="lang_rep" id="lang_rep">
+      <option value="id">id</option>
+    </select>
+    <br>
+<label for="speaker_rep"  >Speaker Representation</label>
+    <select name="speaker_rep" id="speaker_rep">
+      <option value="id">id</option>
     </select>
     <br>
 <label for="speaker">Speaker</label>
     <select name="speaker" id="speaker">
     <br>
-      <option value="FR">French</option>
-      <option value="EN">English</option>
+      <option value=0>French</option>
+      <option value=10>English</option>
     </select>
     <br>
 
@@ -37,11 +51,7 @@
       <option value=2>2</option>
     </select>
     <br>
-    
-<label for="text">Please provide the text you wish to hear.</label>
-    <br>
-    <textarea id="text" name="text">
-    </textarea><br><br>
+
 
 
 <br>
@@ -49,7 +59,7 @@
 </form>
 
 <audio controls>
-  <source src="/out/sample_0.wav" autoplay="true" type="audio/wav">
+  <source src="/out/latest.wav" autoplay="true" type="audio/wav">
 Your browser does not support the audio element.
 </audio>
 <br>

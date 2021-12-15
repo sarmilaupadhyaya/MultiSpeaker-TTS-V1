@@ -16,7 +16,7 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 def home():
     if request.method == "POST":
         language = request.form["text_lang"].lower()
-        lang_codes = {"fr" : 0, "en": 1}
+        lang_codes = {"fr" : 0, "kv" :0, "en": 1}
         lang_id = lang_codes[language]
         speaker_id = int(request.form["speaker"])
         #embedding reps don't work yet

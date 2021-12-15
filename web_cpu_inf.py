@@ -28,9 +28,12 @@ from models import Generator as HiFiGAN
 from text import text_to_sequence
 import logging as logger
 
+
 df = pd.read_csv("feature_extraction/phonemes.csv", header=None)
 df.columns=["phoneme", "id"]
 dictionary = {row["phoneme"]:row["id"] for index, row in df.iterrows()}
+
+
 
 
 HIFIGAN_CONFIG = './checkpts/hifigan-config.json'
@@ -113,7 +116,7 @@ def get_id(id_):
     return id_
 
     
-#if using checkpts frm flashdrive, mount the D drive first
+#if using checkpts from flashdrive, mount the D drive first
 def main(text, checkpt="/mnt/d/chkpt/speaker_id_lang_id/G_516.pth", timesteps=10, speaker_id=2, lang_id=1, language="en", speaker_rep="id", lang_rep="id", outpath="out/web"):
     nsymbols = len(symbols) + 1 if params.add_blank else len(symbols)
     generator = load_grad_tts(checkpt, nsymbols, speaker_rep, lang_rep)

@@ -130,7 +130,7 @@ def _symbols_to_sequence(symbols):
         if  _should_keep_symbol(s) and not (i < len(symbols) -1 and "~" in symbols[i + 1]):
             out.append(_symbol_to_id[s])
         #these are one phoneme represented by two characters
-        elif i < len(symbols) -1 and "#~" in symbols[i + 1]:
+        elif i < len(symbols) -1 and "~" in symbols[i + 1]:
             out.append(_symbol_to_id[s.lower() + "~"])    
     return out
     #return [_symbol_to_id[s] for s in symbols if _should_keep_symbol(s)]

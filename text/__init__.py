@@ -5,6 +5,7 @@ import pickle
 from text import cleaners
 #from text.symbols import symbols
 from feature_extraction import pipeline
+import pandas as pd
 
 
 #_symbol_to_id = {s: i for i, s in enumerate(symbols)}
@@ -24,6 +25,10 @@ def get_arpabet(word, dictionary):
     else:
         return word
 
+df = pd.read_csv("text/kv_phonemes.csv", header=None)
+df.columns=["ipa", "fr"]
+kv_dict = {row["ipa"]:row["fr"] for index, row in df.iterrows()}
+
 
 def text_to_sequence(text, cleaner_names=["english_cleaners"],arpabet_dict=None, dictionary=None, language="en"):
     '''Converts a string of text to a sequence of IDs corresponding to the symbols in the text.
@@ -40,15 +45,28 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"],arpabet_dict=None,
       List of integers corresponding to the symbols in the text
     '''
     sequence = []
-
+    if language == "kv":
+       print("converting KV")
+       conversion = ""
+       #start with a string of IPA symbols (expand with converter later)
+       for char in text:
+           if char in kv_dict.keys():
+               conversion += kv_dict[char]
+               previous = char
+           elif char in '~':
+               conversion += "~"
+       sequence = _symbols_to_sequence_french(conversion)
+       print(conversion)
+       print(sequence)
+       return sequence
     if language == "fr":
+       print("converting French")
        p = pipeline.Preprocessing(text, dictionary, language="fr").get_sequence()
        print(p)
 
        for t in p:
            print(t)
            sequence += _symbols_to_sequence_french(t)
-           print(sequence)
        return sequence
            
 
@@ -80,7 +98,6 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"],arpabet_dict=None,
     # remove trailing space
     if dictionary is not None:
         sequence = sequence[:-1] if sequence[-1] == space[0] else sequence
-    print(sequence)
     return sequence
 
 
@@ -107,7 +124,16 @@ def _clean_text(text, cleaner_names):
 
 
 def _symbols_to_sequence(symbols):
-    return [_symbol_to_id[s] for s in symbols if _should_keep_symbol(s)]
+    out =[]
+    print(symbols)
+    for i, s in enumerate(symbols):
+        if  _should_keep_symbol(s) and not (i < len(symbols) -1 and "~" in symbols[i + 1]):
+            out.append(_symbol_to_id[s])
+        #these are one phoneme represented by two characters
+        elif i < len(symbols) -1 and "~" in symbols[i + 1]:
+            out.append(_symbol_to_id[s.lower() + "~"])    
+    return out
+    #return [_symbol_to_id[s] for s in symbols if _should_keep_symbol(s)]
 
 
 def _arpabet_to_sequence(text):

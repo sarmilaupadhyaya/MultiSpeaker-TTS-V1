@@ -10,15 +10,15 @@ from model.utils import fix_len_compatibility
 
 
 # data parameters
-train_filelist_path = 'resources/filelists/final_merged_train.txt'
-valid_filelist_path = 'resources/filelists/final_merged_val.txt'
-test_filelist_path = 'resources/filelists/final_merged_test.txt'
+train_filelist_path = 'resources/filelists/final2_merged_train.txt'
+valid_filelist_path = 'resources/filelists/final2_merged_val.txt'
+test_filelist_path = 'resources/filelists/final2_merged_test.txt'
 cmudict_path = 'resources/cmu_dictionary'
 n_feats = 80
 add_blank = False
 
 # multispeaker
-n_speakers =12 #n_Speakers+1
+n_speakers =6 #n_Speakers+1
 gin_channels_spk = 80
 # expressive
 #n_emotions = 5# n_emotions + 1, 

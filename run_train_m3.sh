@@ -4,7 +4,7 @@
 #source miniconda/bin/activate
 source newenv2/bin/activate
 
-export CUDA_VISIBLE_DEVICES=0,1
+export CUDA_VISIBLE_DEVICES=0,1,3,4
 
 python train_chkpt_multip.py --speaker embedding --lang embedding
 #python eval.py

@@ -43,8 +43,12 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"],arpabet_dict=None,
 
     if language == "fr":
        p = pipeline.Preprocessing(text, dictionary, language="fr").get_sequence()
+       print(p)
+
        for t in p:
+           print(t)
            sequence += _symbols_to_sequence_french(t)
+           print(sequence)
        return sequence
            
 
@@ -76,6 +80,7 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"],arpabet_dict=None,
     # remove trailing space
     if dictionary is not None:
         sequence = sequence[:-1] if sequence[-1] == space[0] else sequence
+    print(sequence)
     return sequence
 
 
@@ -109,7 +114,8 @@ def _arpabet_to_sequence(text):
     return _symbols_to_sequence(['@' + s for s in text.split()])
 
 def _symbols_to_sequence_french(phonemes):
-    return _symbols_to_sequence(['#' + s for s in phonemes])
+    #return _symbols_to_sequence(['#' + s for s in phonemes]) 
+    return [_symbol_to_id.get('#'+phonemes)]
 
 def _should_keep_symbol(s):
     return s in _symbol_to_id and s != '_' and s != '~'

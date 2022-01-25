@@ -1,0 +1,19 @@
+DLC,FR
+ ,
+\s,\s
+,
+i,i
+e,hé
+œ,es1
+ɛ,es1
+a,ah1
+æ,eh
+ø,e
+ɔ,o
+o,au
+u,ou
+y,u
+A,ans1
+E,hains1
+O,'on
+wa,oit1

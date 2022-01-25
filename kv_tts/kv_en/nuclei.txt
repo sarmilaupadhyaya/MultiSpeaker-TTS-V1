@@ -1,0 +1,18 @@
+IPA,EN
+ ,
+\s,\s
+,
+i,ee
+e,ay
+y,u
+œ,e
+ɛ,e
+a,a
+æ,e
+ø,e
+ɔ,aw
+o,oh
+u,oo
+A,on
+E,en
+O,one1

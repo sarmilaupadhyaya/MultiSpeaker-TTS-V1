@@ -148,5 +148,8 @@ def _symbols_to_sequence_french(phonemes):
     #return _symbols_to_sequence(['#' + s for s in phonemes]) 
     return [_symbol_to_id.get('#'+phonemes)]
 
+def _symbols_to_sequence_kv(phonemes):
+    return [_symbol_to_id[s] for s in phonemes]
+
 def _should_keep_symbol(s):
     return s in _symbol_to_id and s != '_' and s != '~'

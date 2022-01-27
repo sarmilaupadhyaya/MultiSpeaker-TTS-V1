@@ -110,7 +110,7 @@ def convert(string, start="fr", output="kv", norm="Y"):
 
 
 if __name__ == "__main__":
-    convert("Aujord'hui")
+    print(convert("Aujord'hui"))
 
 
 

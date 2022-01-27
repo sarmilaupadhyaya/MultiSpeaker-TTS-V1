@@ -1,0 +1,17 @@
+IPA,ES
+ , 
+\s,\s
+,
+i,i
+e,e
+œ,e
+ɛ,e
+ø,e
+a,a
+æ,e
+ɔ,o
+o,o
+u,u
+A,an
+E,en
+O,on

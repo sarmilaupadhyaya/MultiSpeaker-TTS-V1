@@ -1,0 +1,93 @@
+<!# -*- coding: utf-8 -*-
+"""
+Created on Fri Feb 19 22:27:20 2021
+
+@author: rasul
+""">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LC Spelling Converter</title>
+<link rel="stylesheet" type="text/css" href={{ url_for('static', filename = "tts_style.css") }}>
+</head>
+<body>
+<div style="overflow:scroll;">
+<h1>Louisiana Creole Orthography Converter and Normalizer</h1>
+    <p>Hi this is a combined orthographic converter and text normalizer for Louisiana Creole.
+    This tool uses <a href="https://github.com/dmort27/epitran" target="_blank">Epitran</a> and purpose built rulesets
+    for grapheme-phoneme-grapheme conversions
+    <br>I wrote this program with the triple goal of making older texts easier to read,
+     making it easier to make language models, and gaining experience in language technology.
+     <br>Try it out on some <a href="https://archive.org/stream/ajs8769.0001.001.umich.edu/ajs8769.0001.001.umich.edu_djvu.txt" target="_blank">folktales</a>
+    <br>This converter is a work in progress, and was created to solve some of the issues
+    noted here by Oliver Mayeux:
+    <a href="http://om.conlang.org/LCorthographytool/" target="_blank">Louisiana Creole Orthography Tool</a>
+    <br><br>
+    Namely, most of the issues with intervocalic nasals have been resolved,
+    and transliteration from French spelling to the Kouri-Vini orthography takes
+    etymology into consideration.
+    <br>Two remaining challenges are incorporating etymology when transliterating IPA/DLC and word sense disambiguation for adding circumflexes.
+    <br>There is some support for capitalization as well.
+    <br>Adjust the window size by clicking and dragging as needed.
+</p>
+    <h3>Spelling options (Most to least etymological)</h3>
+        <p>
+            <br><strong>French:</strong> Mainly used for historic texts through the 20th century.
+            Note: This program converts spellings; it is not a French to Louisiana Creole translator.
+            <br><strong>Kouri Vini:</strong> Standard developed by Christophe Landry
+               <a href="http://www.mylhcv.com/guide-to-louisiana-creole-orthography/" target="_blank">
+               (Guide to Louisiana Creole Orthography)</a>
+               and used in the
+               <a href="https://sites.google.com/view/learnlouisianacreole/home?authuser=0" target="_blank">
+               Ti Liv Kréyòl</a>
+            <br><strong>DLC: </strong> The system developed by Thomas A. Klingler and used
+            in the <a href="https://frit.indiana.edu/research/publications/dictionary-of-la-creole.html" target="_blank">
+                Dictionary of Louisiana Creole. </a>
+            <br><strong>IPA: </strong>The International Phonetic Alphabet.
+            Note: Since the focus is spelling, some distinctions made by linguists
+            are collapsed here.
+        </p>
+<form action="/" method = "post">
+<label for="input system"  >Input spelling system</label>
+    <select name="start" id="start">
+      <option value="FR">French orthography</option>
+      <option value="KV">Kouri-Vini</option>
+      <option value="DLC">Dictionary of Louisiana Creole</option>
+      <option value="IPA">International Phonetic Alphabet</option>
+    </select>
+    <br>
+
+<label for="speaker">Speaker</label>
+    <select name="speaker" id="speaker">
+    <br>
+      <option value="FR">French</option>
+      <option value="ES">Spanish</option>
+    </select>
+    <br>
+
+<label for="text">Please provide the text you wish to hear.</label>
+    <br>
+    <textarea id="text" name="text">
+    </textarea><br><br>
+
+
+<input type="submit" value="Listen">
+</form>
+<br>
+
+<audio controls>
+  <source src="data/test.mp3" autoplay="true" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<p>Rasul Dent. Last updated: <strong>November 3, 2021</strong></p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+    <img alt="Creative Commons License" style="border-width:0"
+    src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+    <br />This work is licensed under a
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+        Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+        </a>.
+</div>
+</body>
+</html>

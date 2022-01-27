@@ -1,0 +1,3 @@
+[submodule "kv_tts/epitran"]
+	path = kv_tts/epitran
+	url = https://github.com/razdent/epitran.git

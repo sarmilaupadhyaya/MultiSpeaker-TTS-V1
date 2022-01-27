@@ -53,7 +53,6 @@ Created on Wed Jan 20 15:07:11 2021
 @author: rasul
 """
 import epitran
-import re
 import os
 
 fr = epitran.Epitran("lou-Latn-fra")
@@ -106,7 +105,7 @@ def fr_ipa(string="", fr=fr, ipa = kv_out, norm=True):
     return kv_ipa(inter)
 
 def fr_dlc(string="", fr=fr, ipa=kv_out, dlc=dlc_in, norm=True):
-    first = fr_kv(string, normal=norm)
+    first = fr_kv(string, norm=norm)
     second = kv_ipa(string=first)
     last = ipa_dlc(string=second)
     return match_capitals(last, first)
@@ -124,7 +123,7 @@ def dlc_kv(string="", dlc=dlc_out, kv=kv_in, norm=True):
         inter = normalize(inter)
     return match_capitals(inter, string)
 
-def ident(string, normalize=False):
+def ident(string, norm=False):
     return string
 
 
@@ -155,7 +154,7 @@ def convert(string, start="fr", output="kv", norm="Y"):
 
     return out
 
-  import os.path as path
+import os.path as path
 #b for backward, f for forward
 def read_file(folder, fname):
     fname = path.join(folder, fname)

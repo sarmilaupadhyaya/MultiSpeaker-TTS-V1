@@ -59,7 +59,7 @@ class Preprocessing:
             pipe = subprocess.Popen(["./feature_extraction/get_phonemes.pl "+ self.input_var +" texts hts run > "+ self.output_var],stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True )
             output, errors = pipe.communicate()
             import pdb
-            pdb.set_trace()
+            #pdb.set_trace()
             pipe = subprocess.Popen(["python3 feature_extraction/extract_phonemes.py  --input "+ self.output_var +" --output "+ self.phoneme_out],stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True )
             output, errors = pipe.communicate()
 
@@ -91,7 +91,7 @@ class Preprocessing:
                     else:
 
                         import pdb
-                        pdb.set_trace()
+                        #pdb.set_trace()
             assert len(each) == len(ids)
             return ids
                 

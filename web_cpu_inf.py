@@ -117,7 +117,7 @@ def get_id(id_):
 
     
 #if using checkpts from flashdrive, mount the D drive first
-def main(text, checkpt="../models/sili_1000.pth", timesteps=10, speaker_id=2, lang_id=1, language="en", speaker_rep="id", lang_rep="id", outpath="out/web"):
+def main(text, checkpt="../app_models/sili_1k.pth", timesteps=50, speaker_id=2, lang_id=1, language="en", speaker_rep="id", lang_rep="id", outpath="out/", out_f=None):
     nsymbols = len(symbols) + 1 if params.add_blank else len(symbols)
     generator = load_grad_tts(checkpt, nsymbols, speaker_rep, lang_rep)
     vocoder = load_hifi()
@@ -141,10 +141,13 @@ def main(text, checkpt="../models/sili_1000.pth", timesteps=10, speaker_id=2, la
             print(f'Grad-TTS RTF: {t * 22050 / (y_dec.shape[-1] * 256)}')
 
             audio = (vocoder.forward(y_dec).cpu().squeeze().clamp(-1, 1).numpy() * 32768).astype(np.int16)
-            write(os.path.join(outpath, str(speaker_id)+'_'+str(lang_id) +".wav"), 22050, audio)
-            write(os.path.join(outpath, "latest" +".wav"), 22050, audio)
+            if out_f:
+                write(os.path.join(outpath, out_f), 22050, audio)
+            else:
+                write(os.path.join(outpath, str(speaker_id)+'_'+str(lang_id) +".wav"), 22050, audio)
+                write(os.path.join(outpath, "latest" +".wav"), 22050, audio)
     print('Done. Check out `out` folder for samples.')
 if __name__ == '__main__':
-    for i in range(10):
-        main("Il neige aujourd'hui. Moi, j'aime pas du tout la neige", lang_id=0, language="fr", speaker_id=i)
+    for i in range(6):
+        main("This is a test of our text to speech system.", lang_id=1, language="en", speaker_id=i)
 

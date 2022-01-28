@@ -147,7 +147,7 @@ def convert(string, start="fr", output="kv", norm="Y"):
         i = input_options.index(start)
         j = output_options.index(output)
         #restore the period we split on
-        new = combinations[i][j](string=sub, normalize=norm)
+        new = combinations[i][j](string=sub, norm=norm)
         if start == "kv" and output =="kv" and norm:
             new = normalize(new)
         out += new
@@ -281,14 +281,13 @@ def read_audio(lang, speaker, text):
     basedir = path.abspath(path.dirname(__file__))
     folder = lang + "_" + speaker
     folder = path.join(basedir, folder)
-    onsets, nuclei, codas = syl.load_folder(folder)
-    converted = syl.get_pronunciation(text, onsets, nuclei, codas)
+    onsets, nuclei, codas = load_folder(folder)
+    converted = get_pronunciation(text, onsets, nuclei, codas)
     tts = gTTS(converted, lang=speaker)
     return tts
 
-def write_tts(tts, folder, f):
-        basedir = path.abspath(path.dirname(__file__))
+def write_tts(tts, folder, f, base=path.abspath(path.dirname(__file__))):
         #for some reason, there was a problem doing the join as one step
-        out_dir = path.join(basedir, folder)
+        out_dir = path.join(base, folder)
         out = path.join(out_dir, f)
         tts.save(out)

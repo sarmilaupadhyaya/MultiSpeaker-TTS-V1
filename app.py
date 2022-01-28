@@ -6,18 +6,21 @@ Created on Tue Oct 12 10:30:35 2021
 
 """
 from flask import Flask, render_template, request, send_from_directory
+from flask_cors import CORS
 from web_cpu_inf import main as inf
 import os, sys
 from gtts import gTTS
 app = Flask(__name__)
+CORS(app)
 #avoid using cached audio
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+base=  os.path.dirname(os.path.abspath(__file__))
 
-import kv_tts as kv
+from kv_tts import convert, read_audio, write_tts
 @app.route("/", methods = ['POST', 'GET'])
 def home():
     if request.method == "POST":
-        compare = request.form["gtts"]
+        compare = request.form["compare"]
         language = request.form["text_lang"].lower()
         lang_codes = {"fr" : 0, "kv" :0, "en": 1}
         lang_id = lang_codes[language]
@@ -27,34 +30,34 @@ def home():
         speaker_rep = request.form["speaker_rep"]
         string = request.form["text"]
         diffusion = int(request.form["diffusion"])
-        start = request.form["start"]
+        out_f = "model1.wav"
         #accent
         if language == "kv":
-            string = kv.convert(string, start="kv", output="ipa")
+            string = convert(string, start="kv", output="ipa")
 
         inf(string, timesteps=diffusion, language=language,
             lang_id=lang_id, speaker_id=speaker_id, 
-            speaker_rep=speaker_rep, lang_rep=lang_rep)
+            speaker_rep=speaker_rep, lang_rep=lang_rep, out_f=out_f)
         if compare:
             #placeholder
             tts = None
             if language == "kv":
-                tts = kv.read_audio("kv", "fr", string)
-                pass
+                tts = read_audio("kv", "fr", string)
             else:
                 tts = gTTS(string, lang=language)
-            kv.write_tts(tts, "out/web", "gt.mp3")
+            write_tts(tts, "out/", "gt.mp3", base=base)
         return render_template("home.html")
     else:
         return render_template("home.html")
     
-@app.route("/out/web/model1.wav", methods = ['GET'])
+@app.route("/out/model1.wav", methods = ['GET'])
 def model1():
-    return send_from_directory(directory="out/web/", filename="model1.wav", cache_timeout=0)
+    return send_from_directory("out", "model1.wav")
 
-@app.route("/out/web/gt.mp3", methods = ['GET'])
+@app.route("/out/gt.mp3", methods = ['GET'])
 def gt():
-    return send_from_directory(directory="out/web/", filename="gt1.wav", cache_timeout=0)
+    return send_from_directory("out", "gt.mp3")
 
 if __name__ == "__main__":
+    app.debug = True
     app.run()

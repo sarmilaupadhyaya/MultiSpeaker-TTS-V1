@@ -19,6 +19,7 @@ base=  os.path.dirname(os.path.abspath(__file__))
 from kv_tts import convert, read_audio, write_tts
 @app.route("/", methods = ['POST', 'GET'])
 def home():
+    checkpts = "../app_models"
     if request.method == "POST":
         compare = request.form["compare"]
         language = request.form["text_lang"].lower()
@@ -34,8 +35,9 @@ def home():
         #accent
         if language == "kv":
             string = convert(string, start="kv", output="ipa")
+            string = string.replace(" ", "")
 
-        inf(string, timesteps=diffusion, language=language,
+        inf(string, checkpts=checkpts, timesteps=diffusion, language=language,
             lang_id=lang_id, speaker_id=speaker_id, 
             speaker_rep=speaker_rep, lang_rep=lang_rep, out_f=out_f)
         if compare:

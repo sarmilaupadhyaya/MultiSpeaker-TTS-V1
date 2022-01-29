@@ -48,16 +48,14 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"],arpabet_dict=None,
     if language == "kv":
        print("converting KV")
        conversion = []
+       print(text)
        #start with a string of IPA symbols (expand with converter later)
        for char in text:
            if char in kv_dict.keys():
                conversion.append(kv_dict[char])
-           elif char in " ~'":
+           elif char in "̃~":
                conversion[-1] = conversion[-1].lower() + "~"
-               conversion += kv_dict[char]
-               previous = char
-           elif char in '~':
-               conversion += "~"
+       print(conversion)
        sequence = _symbols_to_sequence_kv(conversion)
        
        print(sequence)
@@ -146,7 +144,7 @@ def _symbols_to_sequence_french(phonemes):
     return [_symbol_to_id.get('#'+phonemes)]
 
 def _symbols_to_sequence_kv(phonemes):
-    return [_symbol_to_id[s] for s in phonemes]
+    return [_symbol_to_id[phoneme] for phoneme in phonemes]
 
 def _should_keep_symbol(s):
     return s in _symbol_to_id and s != '_' and s != '~'

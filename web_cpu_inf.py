@@ -20,6 +20,7 @@ from text import text_to_sequence, cmudict
 from text.symbols import symbols
 from utils import intersperse
 import pandas as pd
+from model.utils import fix_len_compatibility
 
 import sys
 sys.path.append('./hifi-gan/')
@@ -39,17 +40,24 @@ dictionary = {row["phoneme"]:row["id"] for index, row in df.iterrows()}
 HIFIGAN_CONFIG = './checkpts/hifigan-config.json'
 HIFIGAN_CHECKPT = './checkpts/hifigan.pt'
 sample_lang={0:"sample/audio_lang_0.npy", 1:"sample/audio_lang_1.npy"}
-sample_speaker = "sample/audio_speaker"
+sample_speaker = "sample/audio_speaker_"
 
-def get_mel(self, filepath):
+def get_mel( filepath):
+
     mel = np.load(filepath, allow_pickle=True)
-    return mel
+    mel = np.expand_dims(mel, axis=0)
+    B = len(mel)
+    y_max_length = max([item.shape[-1] for item in mel])
+    y_max_length = fix_len_compatibility(y_max_length)
+    n_feats = mel[0].shape[-2]
+    y = torch.zeros((B, n_feats, y_max_length), dtype=torch.float32)
+    return y
 
-def get_mel_speaker(id):
-    return get_mel(sample_speaker+str(id)+".npy")
+def get_mel_speaker(i):
+    return get_mel(sample_speaker+str(i)+".npy")
 
-def get_mel_language(id):
-    return get_mel(sample_lang[id])
+def get_mel_language(i):
+    return get_mel(sample_lang[i])
 
 def get_text(text, language,add_blank=True):
     print(language)
@@ -117,8 +125,17 @@ def get_id(id_):
 
     
 #if using checkpts from flashdrive, mount the D drive first
-def main(text, checkpt="../app_models/sili_1k.pth", timesteps=50, speaker_id=2, lang_id=1, language="en", speaker_rep="id", lang_rep="id", outpath="out/", out_f=None):
+def main(text, checkpts="../app_models", timesteps=50, speaker_id=2, lang_id=1, language="en", speaker_rep="id", lang_rep="id", outpath="out/", out_f=None):
     nsymbols = len(symbols) + 1 if params.add_blank else len(symbols)
+    chosen = "sili_1k.pth"
+    if speaker_rep == "emb" and lang_rep == "id":
+        chosen = "seli_1k.pth"
+    elif speaker_rep == "id" and lang_rep == "emb":
+        chosen = "sile_1k.pth"
+    elif speaker_rep == "emb" and lang_rep == "emb":
+        chosen = "sele_1k.pth"
+        
+    checkpt = os.path.join(checkpts, chosen)
     generator = load_grad_tts(checkpt, nsymbols, speaker_rep, lang_rep)
     vocoder = load_hifi()
     cmu = cmudict.CMUDict('./resources/cmu_dictionary')
@@ -129,9 +146,15 @@ def main(text, checkpt="../app_models/sili_1k.pth", timesteps=50, speaker_id=2, 
             print(language)
             x = get_text(text,language,params.add_blank).unsqueeze(0)
             x_lengths = torch.LongTensor([x.shape[-1]])
-            
-            g1 = torch.LongTensor(get_id(int(speaker_id))).unsqueeze(0)
-            g2 = torch.LongTensor(get_id(int(lang_id))).unsqueeze(0)
+            # switching the model
+            if speaker_rep == "id":
+                g1 = torch.LongTensor(get_id(int(speaker_id))).unsqueeze(0)
+            else:
+                g1 =get_mel_speaker(speaker_id)
+            if lang_rep == "id":
+                g2 = torch.LongTensor(get_id(int(lang_id))).unsqueeze(0)
+            else:
+                g2 = get_mel_language(lang_id)
             print(x.shape, x_lengths, g1.shape, g2.shape)
             
             t = dt.datetime.now()
@@ -149,5 +172,5 @@ def main(text, checkpt="../app_models/sili_1k.pth", timesteps=50, speaker_id=2, 
     print('Done. Check out `out` folder for samples.')
 if __name__ == '__main__':
     for i in range(6):
-        main("This is a test of our text to speech system.", lang_id=1, language="en", speaker_id=i)
+        main("This is a test of our text to speech system.", lang_id=1, language="en", speaker_id=i, speaker_rep="emb", lang_rep="emb")
 

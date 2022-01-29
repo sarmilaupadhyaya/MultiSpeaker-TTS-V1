@@ -36,6 +36,8 @@ def home():
         if language == "kv":
             string = convert(string, start="kv", output="ipa")
             string = string.replace(" ", "")
+            string = string.replace(",", " ")
+            string = string.replace(".", "  ")
 
         inf(string, checkpts=checkpts, timesteps=diffusion, language=language,
             lang_id=lang_id, speaker_id=speaker_id, 

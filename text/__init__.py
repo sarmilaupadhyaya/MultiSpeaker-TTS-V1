@@ -81,9 +81,11 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"],arpabet_dict=None,
 
                 print(text, "arphabet")
                 clean_text = [get_arpabet(w, arpabet_dict) for w in clean_text.split(" ")]
+                print(clean_text)
                 for i in range(len(clean_text)):
                     t = clean_text[i]
                     if t.startswith("{"):
+                        
                         sequence += _arpabet_to_sequence(t[1:-1])
                     else:
                         sequence += _symbols_to_sequence(t)

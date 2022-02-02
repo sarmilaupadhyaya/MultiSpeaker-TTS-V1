@@ -20,28 +20,11 @@ class Preprocessing:
         self.input_var = "feature_extraction/tmp/input.txt"
         self.output_var = "feature_extraction/tmp/output.txt"
         self.phoneme_out = "feature_extraction/tmp/phoneme_out.txt"
-        self.id_to_phoneme = {v:k for k,v in phoneme_dictionary.items()}
         self.text = text
         self.language=language
         with open(self.input_var, "w") as f:
             f.write(text)
-        self.phoneme_to_id = phoneme_dictionary
 
-    def sequence_to_integer(self):
-        """
-
-        """
-
-        with open(self.phoneme_out, 'r') as f:
-            list_int = []
-            phoneme = f.read().split(' ')
-            for phone in phoneme:
-                list_int.append(self.phoneme_to_id.get(phone))
-            #new_path = file_path.split(".txt")[0]+"_int.txt"
-            #new = open(new_path,"w+")
-            #new.write(" ".join(list_int))
-            #new.close()
-            return list_int
 
     def integer_to_sequence(self, list_integer):
         pass
@@ -55,7 +38,7 @@ class Preprocessing:
         ## put text in a temp file and get the output and selete the temp file
         ## run the pearl script
         if self.language=="fr":
-            print("./feature_extraction/get_phonemes.pl "+ self.input_var +" texts hts run > "+ self.output_var)
+            print("./get_phonemes.pl "+ self.input_var +" texts hts run > "+ self.output_var)
             pipe = subprocess.Popen(["./feature_extraction/get_phonemes.pl "+ self.input_var +" texts hts run > "+ self.output_var],stdout=subprocess.PIPE, stderr=subprocess.PIPE,shell=True )
             output, errors = pipe.communicate()
             import pdb

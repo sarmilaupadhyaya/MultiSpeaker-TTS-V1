@@ -3,7 +3,7 @@
 import re
 import pickle
 from text import cleaners
-#from text.symbols import symbols
+from text.symbols import symbols
 from feature_extraction import pipeline
 import pandas as pd
 
@@ -13,10 +13,16 @@ import pandas as pd
 _curly_re = re.compile(r'(.*?)\{(.+?)\}(.*)')
 
 # saving symbol to id for inference as everytime we run this file, the order is changed.
-with open('text/_symbol_to_id.pickle', 'rb') as handle:
-    _symbol_to_id = pickle.load(handle)
-    _id_to_symbol = {i: s for s,i in _symbol_to_id.items()}
+#with open('text/_symbol_to_id.pickle', 'rb') as handle:
+#    _symbol_to_id = pickle.load(handle)
+#    _id_to_symbol = {i: s for s,i in _symbol_to_id.items()}
 
+dff = pd.read_csv("merged_phoneme_ids.csv", sep="\t")[["symbol","id"]]
+_symbol_to_id = dict()
+for index, row in dff.iterrows():
+
+    _symbol_to_id[row["symbol"].replace("  "," ")] = row["id"]
+_id_to_symbol = {i:s for s,i in _symbol_to_id.items()}
 
 def get_arpabet(word, dictionary):
     word_arpabet = dictionary.lookup(word)
@@ -44,11 +50,11 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"],arpabet_dict=None,
     Returns:
       List of integers corresponding to the symbols in the text
     '''
+    symbols = []
     sequence = []
     if language == "kv":
        print("converting KV")
        conversion = []
-       print(text)
        #start with a string of IPA symbols (expand with converter later)
        for char in text:
            if char in kv_dict.keys():
@@ -57,8 +63,6 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"],arpabet_dict=None,
                conversion[-1] = conversion[-1].lower() + "~"
        print(conversion)
        sequence = _symbols_to_sequence_kv(conversion)
-       
-       print(sequence)
        return sequence
     if language == "fr":
        print("converting French")
@@ -67,10 +71,13 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"],arpabet_dict=None,
 
        for t in p:
            sequence += _symbols_to_sequence_french(t)
+           symbols += t
+       print(text)
+       print(sequence)
+       print(symbols)
        return sequence
-           
+    
 
-     
     space = _symbols_to_sequence(' ')
     # Check for curly braces and treat their contents as ARPAbet:
     while len(text):
@@ -78,11 +85,10 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"],arpabet_dict=None,
         if not m:
             clean_text = _clean_text(text, cleaner_names)
             if arpabet_dict is not None:
-
-                print(text, "arphabet")
                 clean_text = [get_arpabet(w, arpabet_dict) for w in clean_text.split(" ")]
                 for i in range(len(clean_text)):
                     t = clean_text[i]
+                    symbols.append(t)
                     if t.startswith("{"):
                         sequence += _arpabet_to_sequence(t[1:-1])
                     else:
@@ -97,7 +103,12 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"],arpabet_dict=None,
   
     # remove trailing space
     if dictionary is not None:
+        print(sequence[-1])
+        print(text)
         sequence = sequence[:-1] if sequence[-1] == space[0] else sequence
+    print(symbols)
+    print(text)
+    print(sequence)
     return sequence
 
 
@@ -137,6 +148,9 @@ def _symbols_to_sequence(symbols):
 
 
 def _arpabet_to_sequence(text):
+    print(text)
+    print("here")
+    print(['@'+s for s in text.split()])
     return _symbols_to_sequence(['@' + s for s in text.split()])
 
 def _symbols_to_sequence_french(phonemes):

@@ -28,16 +28,19 @@ from models import Generator as HiFiGAN
 from model.utils import fix_len_compatibility
 from text import text_to_sequence
 
-df = pd.read_csv("feature_extraction/phonemes.csv", header=None)
-df.columns=["phoneme", "id"]
-dictionary = {row["phoneme"]:row["id"] for index, row in df.iterrows()}
+#df = pd.read_csv("feature_extraction/phonemes.csv", header=None)
+#df.columns=["phoneme", "id"]
+#dictionary = {row["phoneme"]:row["id"] for index, row in df.iterrows()}
+dictionary = cmudict
+cmupath = "resources/cmu_dictionary"
+dictionary =cmudict.CMUDict(cmupath)
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 
 
 def get_text(text, language,add_blank=True):
 
-    seq = [str(each) for each in text_to_sequence(text, dictionary=dictionary, language=language)]
+    seq = [str(each) for each in text_to_sequence(text, dictionary=dictionary,arpabet_dict=dictionary, language=language)]
     text_norm = torch.from_numpy(np.asanyarray(seq, dtype=np.int)).type(torch.int32)
     if add_blank:
         text_norm = intersperse(text_norm, 200)  # add a blank token, whose id number is len(symbols)
@@ -79,7 +82,7 @@ def get_id(id_):
 
 HIFIGAN_CONFIG = './checkpts/hifigan-config.json'
 HIFIGAN_CHECKPT = './checkpts/hifigan.pt'
-grad_checkpoint_1 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs3/speaker_id_lang_id/G_889.pth'
+grad_checkpoint_1 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs_c/speaker_id_lang_id/G_499.pth'
 grad_checkpoint_2 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/speaker_embedding_lang_id/G_1000.pth'
 grad_checkpoint_3 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/sile_1000.pth'
 grad_checkpoint_4 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs2/speaker_embedding_lang_embedding/G_399.pth'

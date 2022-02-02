@@ -13,9 +13,12 @@ from text import *
 
 
 
-df = pd.read_csv("../feature_extraction/phonemes.csv", header=None)
-df.columns=["phoneme", "id"]
-dictionary = {row["phoneme"]:row["id"] for index, row in df.iterrows()}
+#df = pd.read_csv("merged_phonemes_id.csv", header=None)
+#df.columns=["phoneme", "id"]
+#dictionary = {row["phoneme"]:row["id"] for index, row in df.iterrows()}
+dictionary = cmudict
+import pdb
+pdb.set_trace()
 
 stft = commons.TacotronSTFT(
             hparams.filter_length, hparams.hop_length, hparams.win_length,
@@ -50,7 +53,7 @@ def main(filepath, language, speakerid, langid):
     print(language, speakerid, langid)
     f = open("../resources/filelists/final3_" +filepath, "w")
     for line in open(filelists_path, 'r'):
-        fpath =ry line.strip().split('|')[0]
+        fpath = line.strip().split('|')[0]
         text = line.strip().split('|')[1]
         melspec = get_mel(fpath)
         fpath = "/".join(fpath.split("/")[:-2])+"/"+fpath.split("/")[-1]
@@ -58,8 +61,9 @@ def main(filepath, language, speakerid, langid):
         np.save(fpath.replace('.wav', '.npy'), melspec)
         p = pipeline.Preprocessing(text, dictionary, language="en")
         seq = [str(each) for each in text_to_sequence(text, dictionary=dictionary, language=language)]
+        seq=[int(x) for x in seq]
         print(seq)
-        if seq is None:
+        if (seq is None) or None in seq:
             import pdb
             pdb.set_trace()
         speaker_id = speakerid

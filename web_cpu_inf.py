@@ -133,7 +133,7 @@ def main(text, checkpts="../models", timesteps=50, speaker_id=2, lang_id=1, lang
         chosen = "G_1000_model4_6speakers.pth"
         params.n_speakers = 6
     checkpt = os.path.join(checkpts, chosen)
-    generator = load_grad_tts(checkpt, nsymbols, speaker_rep, lang_rep)
+    generator = load_grad_tts(checkpt, nsymbols, rep, rep)
     vocoder = load_hifi()
     cmu = cmudict.CMUDict('./resources/cmu_dictionary')
     texts = [text]
@@ -167,5 +167,5 @@ def main(text, checkpts="../models", timesteps=50, speaker_id=2, lang_id=1, lang
     print('Done. Check out `out` folder for samples.')
 if __name__ == '__main__':
     for i in range(6):
-        main("This is a test of our text to speech system.", lang_id=1, language="en", speaker_id=i, speaker_rep="emb", lang_rep="emb")
+        main("This is a test of our text to speech system.", lang_id=1, language="en", speaker_id=i, rep="emb")
 

@@ -13,16 +13,16 @@ import pandas as pd
 _curly_re = re.compile(r'(.*?)\{(.+?)\}(.*)')
 
 # saving symbol to id for inference as everytime we run this file, the order is changed.
-#with open('text/_symbol_to_id.pickle', 'rb') as handle:
-#    _symbol_to_id = pickle.load(handle)
-#    _id_to_symbol = {i: s for s,i in _symbol_to_id.items()}
+with open('text/_symbol_to_id.pickle', 'rb') as handle:
+    _symbol_to_id = pickle.load(handle)
+    _id_to_symbol = {i: s for s,i in _symbol_to_id.items()}
 
-dff = pd.read_csv("merged_phoneme_ids.csv", sep="\t")[["symbol","id"]]
-_symbol_to_id = dict()
-for index, row in dff.iterrows():
+#dff = pd.read_csv("text/final_phonemes.csv", sep="\t")[["symbol","id"]]
+#_symbol_to_id = dict()
+#for index, row in dff.iterrows():
 
-    _symbol_to_id[row["symbol"].replace("  "," ")] = row["id"]
-_id_to_symbol = {i:s for s,i in _symbol_to_id.items()}
+#    _symbol_to_id[row["symbol"].replace("  "," ")] = row["id"]
+#_id_to_symbol = {i:s for s,i in _symbol_to_id.items()}
 
 def get_arpabet(word, dictionary):
     word_arpabet = dictionary.lookup(word)

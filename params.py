@@ -10,15 +10,15 @@ from model.utils import fix_len_compatibility
 
 
 # data parameters
-train_filelist_path = 'resources/filelists/final2_merged_train.txt'
-valid_filelist_path = 'resources/filelists/final2_merged_val.txt'
-test_filelist_path = 'resources/filelists/final2_merged_test.txt'
+train_filelist_path = 'resources/filelists/final6_merged_train.txt'
+valid_filelist_path = 'resources/filelists/final6_merged_val.txt'
+test_filelist_path = 'resources/filelists/final6_merged_test.txt'
 cmudict_path = 'resources/cmu_dictionary'
 n_feats = 80
 add_blank = False
 
 # multispeaker
-n_speakers =6 #n_Speakers+1
+n_speakers =2 #n_Speakers+1
 gin_channels_spk = 80
 # expressive
 #n_emotions = 5# n_emotions + 1, 
@@ -43,7 +43,7 @@ beta_max = 20.0
 pe_scale = 1000  # 1 for `grad-tts-old.pt` checkpoint
 
 # training parameters
-log_dir = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/' # model dir path
+log_dir = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs_v/' # model dir path
 
 test_size = 4
 n_epochs = 10000

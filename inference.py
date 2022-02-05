@@ -79,10 +79,10 @@ def get_id(id_):
 
 HIFIGAN_CONFIG = './checkpts/hifigan-config.json'
 HIFIGAN_CHECKPT = './checkpts/hifigan.pt'
-grad_checkpoint_1 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs3/speaker_id_lang_id/G_889.pth'
+grad_checkpoint_1 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs2/speaker_id_lang_id/G_1000.pth'
 grad_checkpoint_2 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/speaker_embedding_lang_id/G_1000.pth'
 grad_checkpoint_3 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/sile_1000.pth'
-grad_checkpoint_4 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs2/speaker_embedding_lang_embedding/G_399.pth'
+grad_checkpoint_4 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/logs/speaker_embedding_lang_embedding/G_1000.pth'
 outpath_1 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/baseline_v1'
 outpath_2 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/baseline_v2'
 outpath_3 = '/srv/storage/multispeechedu@talc-data2.nancy.grid5000.fr/software_project/akriukova/gradtts_model/baseline_v3'
@@ -148,6 +148,7 @@ if __name__ == '__main__':
         outpath = outpath_4
         speaker_rep = "embedding"
         lang_rep = "embedding"
+        params.n_speakers = 6
     else:
         import sys
         sys.exit("No such version of model available")

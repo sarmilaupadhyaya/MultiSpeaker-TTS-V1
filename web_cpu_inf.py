@@ -125,16 +125,13 @@ def get_id(id_):
 
     
 #if using checkpts from flashdrive, mount the D drive first
-def main(text, checkpts="../app_models", timesteps=50, speaker_id=2, lang_id=1, language="en", speaker_rep="id", lang_rep="id", outpath="out/", out_f=None):
+def main(text, checkpts="../models", timesteps=50, speaker_id=2, lang_id=1, language="en", rep="id", outpath="out/", out_f=None):
     nsymbols = len(symbols) + 1 if params.add_blank else len(symbols)
-    chosen = "sili_1k.pth"
-    if speaker_rep == "emb" and lang_rep == "id":
-        chosen = "seli_1k.pth"
-    elif speaker_rep == "id" and lang_rep == "emb":
-        chosen = "sile_1k.pth"
-    elif speaker_rep == "emb" and lang_rep == "emb":
-        chosen = "sele_1k.pth"
-        
+    chosen = "G_1000_model1_speaker2.pth"
+    params.n_speakers = 2
+    if rep == "emb":
+        chosen = "G_1000_model4_6speakers.pth"
+        params.n_speakers = 6
     checkpt = os.path.join(checkpts, chosen)
     generator = load_grad_tts(checkpt, nsymbols, speaker_rep, lang_rep)
     vocoder = load_hifi()
@@ -147,13 +144,11 @@ def main(text, checkpts="../app_models", timesteps=50, speaker_id=2, lang_id=1, 
             x = get_text(text,language,params.add_blank).unsqueeze(0)
             x_lengths = torch.LongTensor([x.shape[-1]])
             # switching the model
-            if speaker_rep == "id":
+            if rep == "id":
                 g1 = torch.LongTensor(get_id(int(speaker_id))).unsqueeze(0)
-            else:
-                g1 =get_mel_speaker(speaker_id)
-            if lang_rep == "id":
                 g2 = torch.LongTensor(get_id(int(lang_id))).unsqueeze(0)
             else:
+                g1 =get_mel_speaker(speaker_id)
                 g2 = get_mel_language(lang_id)
             print(x.shape, x_lengths, g1.shape, g2.shape)
             

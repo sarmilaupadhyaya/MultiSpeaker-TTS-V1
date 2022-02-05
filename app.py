@@ -26,9 +26,9 @@ def home():
         lang_codes = {"fr" : 0, "kv" :0, "en": 1}
         lang_id = lang_codes[language]
         speaker_id = int(request.form["speaker"])
-        #embedding reps don't work yet
-        lang_rep = request.form["lang_rep"]
-        speaker_rep = request.form["speaker_rep"]
+        rep= request.form["rep"]
+        #lang_rep = request.form["lang_rep"]
+        #speaker_rep = request.form["speaker_rep"]
         string = request.form["text"]
         diffusion = int(request.form["diffusion"])
         out_f = "model1.wav"
@@ -41,7 +41,7 @@ def home():
 
         inf(string, checkpts=checkpts, timesteps=diffusion, language=language,
             lang_id=lang_id, speaker_id=speaker_id, 
-            speaker_rep=speaker_rep, lang_rep=lang_rep, out_f=out_f)
+            rep=rep, out_f=out_f)
         if compare:
             #placeholder
             tts = None

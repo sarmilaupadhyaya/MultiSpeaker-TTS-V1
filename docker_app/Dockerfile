@@ -4,7 +4,7 @@ ENV PYTHONPATH "${PYTHONPATH}:/MultiSpeaker-TTS-V1"
 RUN apt-get update && apt install tzdata -y
 ENV TZ=Europe/Rome
 RUN apt-get install -y git
-RUN apt-get install -y python 3.7 && apt-get install -y python3-pip
+RUN apt-get install -y python 3.7; apt-get install -y python3-pip
 RUN apt-get install libwww-perl -y
 RUN git clone https://github.com/sarmilaupadhyaya/MultiSpeaker-TTS-V1.git
 RUN cd  MultiSpeaker-TTS-V1; pip3 install -r new_requirements.txt ;cd model/monotonic_align ;python3 setup.py build_ext --inplace; cd  ../..

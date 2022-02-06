@@ -3,7 +3,7 @@
 import re
 import pickle
 from text import cleaners
-from text.symbols import symbols
+#from text.symbols import symbols
 from feature_extraction import pipeline
 import pandas as pd
 

@@ -11,21 +11,19 @@ Official implementation of the Grad-TTS model based on Diffusion Probabilistic M
 
 <sup>\*Equal contribution.</sup>
 
-## Abstract
-
-**Demo page** with voiced abstract: [link](https://grad-tts.github.io/).
-
-Recently, denoising diffusion probabilistic models and generative score matching have shown high potential in modelling complex data distributions while stochastic calculus has provided a unified point of view on these techniques allowing for flexible inference schemes. In this paper we introduce Grad-TTS, a novel text-to-speech model with score-based decoder producing mel-spectrograms by gradually transforming noise predicted by encoder and aligned with text input by means of Monotonic Alignment Search. The framework of stochastic differential equations helps us to generalize conventional diffusion probabilistic models to the case of reconstructing data from noise with different parameters and allows to make this reconstruction flexible by explicitly controlling trade-off between sound quality and inference speed. Subjective human evaluation shows that Grad-TTS is competitive with state-of-the-art text-to-speech approaches in terms of Mean Opinion Score.
-
 ## Installation
 
-Firstly, install all Python package requirements:
-
-```bash
-pip install -r requirements.txt
-```
-
-Secondly, build `monotonic_align` code (Cython):
+1: Clone this repository.
+2: Install Perl library for French G2P
+"""bash
+apt-get install libwww-perl -y
+"""
+3. Install project requirements
+"""bash
+pip3 install -r new_requirements.txt
+"""
+4. 
+Build `monotonic_align` code (Cython):
 
 ```bash
 cd model/monotonic_align; python setup.py build_ext --inplace; cd ../..
@@ -33,6 +31,12 @@ cd model/monotonic_align; python setup.py build_ext --inplace; cd ../..
 
 Note: code is tested on Python==3.6.9.
 
+5. Initialize and Update Submodule for Louisiana Creole TTS
+""" 
+git submodule init && git submodule update
+"""
+
+6. Install customized version of epitran. 
 ## Inference
 
 You can download Grad-TTS and HiFi-GAN checkpoints trained on LJSpeech dataset (22kHz) from [here](https://drive.google.com/drive/folders/1grsfccJbmEuSBGQExQKr3cVxNV0xEOZ7?usp=sharing).

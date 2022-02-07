@@ -11,7 +11,7 @@ _letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 
 # Prepend "@" to ARPAbet symbols to ensure uniqueness:
 _arpabet = ['@' + s for s in cmudict.valid_symbols]
-_french_phonemes = pd.read_csv("./feature_extraction/phonemes.csv", header=None)
+_french_phonemes = pd.read_csv("MultiSpeaker-TTS-V1/feature_extraction/phonemes.csv", header=None)
 # Export all symbols:
 #symbols = [_pad] + list(_special) + list(_punctuation) + list(_letters) + _arpabet
 symbols = list(set([_pad] + list(_special) + list(_punctuation) + list(_letters) + _arpabet + ["#" + x for x in _french_phonemes[0].tolist()]))

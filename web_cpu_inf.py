@@ -28,6 +28,7 @@ from env import AttrDict
 from models import Generator as HiFiGAN
 from text import text_to_sequence
 import logging as logger
+sys.path.append('./')
 
 
 df = pd.read_csv("feature_extraction/phonemes.csv", header=None)

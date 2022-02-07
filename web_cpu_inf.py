@@ -31,15 +31,15 @@ import logging as logger
 sys.path.append('./')
 
 
-df = pd.read_csv("feature_extraction/phonemes.csv", header=None)
+df = pd.read_csv("MultiSpeaker-TTS-V1/feature_extraction/phonemes.csv", header=None)
 df.columns=["phoneme", "id"]
 dictionary = {row["phoneme"]:row["id"] for index, row in df.iterrows()}
 
 
 
 
-HIFIGAN_CONFIG = './checkpts/hifigan-config.json'
-HIFIGAN_CHECKPT = './checkpts/hifigan.pt'
+HIFIGAN_CONFIG = 'checkpts/hifigan-config.json'
+HIFIGAN_CHECKPT = 'checkpts/hifigan.pt'
 sample_lang={0:"sample/audio_lang_0.npy", 1:"sample/audio_lang_1.npy"}
 sample_speaker = "sample/audio_speaker_"
 
@@ -126,7 +126,7 @@ def get_id(id_):
 
     
 #if using checkpts from flashdrive, mount the D drive first
-def main(text, checkpts="../models", timesteps=50, speaker_id=2, lang_id=1, language="en", rep="id", outpath="out/", out_f=None):
+def main(text, checkpts="models", timesteps=50, speaker_id=2, lang_id=1, language="en", rep="id", outpath="out/", out_f=None):
     nsymbols = len(symbols) + 1 if params.add_blank else len(symbols)
     chosen = "G_1000_model1_speaker2.pth"
     params.n_speakers = 2
@@ -136,7 +136,7 @@ def main(text, checkpts="../models", timesteps=50, speaker_id=2, lang_id=1, lang
     checkpt = os.path.join(checkpts, chosen)
     generator = load_grad_tts(checkpt, nsymbols, rep, rep)
     vocoder = load_hifi()
-    cmu = cmudict.CMUDict('./resources/cmu_dictionary')
+    cmu = cmudict.CMUDict('MultiSpeaker-TTS-V1/resources/cmu_dictionary')
     texts = [text]
     with torch.no_grad():
         for i, text in enumerate(texts):

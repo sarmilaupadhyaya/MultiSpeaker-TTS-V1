@@ -20,6 +20,8 @@ from kv_tts import convert, read_audio, write_tts
 @app.route("/", methods = ['POST', 'GET'])
 def home():
     checkpts = "../app_models"
+    import pdb
+    pdb.set_trace()
     if request.method == "POST":
         compare = request.form["compare"]
         language = request.form["text_lang"].lower()

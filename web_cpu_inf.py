@@ -31,7 +31,7 @@ import logging as logger
 sys.path.append('./')
 
 
-df = pd.read_csv("MultiSpeaker-TTS-V1/feature_extraction/phonemes.csv", header=None)
+df = pd.read_csv("feature_extraction/phonemes.csv", header=None)
 df.columns=["phoneme", "id"]
 dictionary = {row["phoneme"]:row["id"] for index, row in df.iterrows()}
 

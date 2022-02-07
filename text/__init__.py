@@ -13,7 +13,7 @@ import pandas as pd
 _curly_re = re.compile(r'(.*?)\{(.+?)\}(.*)')
 
 # saving symbol to id for inference as everytime we run this file, the order is changed.
-with open('MultiSpeaker-TTS-V1/text/_symbol_to_id.pickle', 'rb') as handle:
+with open('text/_symbol_to_id.pickle', 'rb') as handle:
     _symbol_to_id = pickle.load(handle)
     _id_to_symbol = {i: s for s,i in _symbol_to_id.items()}
 
@@ -31,7 +31,7 @@ def get_arpabet(word, dictionary):
     else:
         return word
 
-df = pd.read_csv("MultiSpeaker-TTS-V1/text/kv_phonemes.csv", header=None)
+df = pd.read_csv("text/kv_phonemes.csv", header=None)
 df.columns=["ipa", "fr"]
 kv_dict = {row["ipa"]:row["fr"] for index, row in df.iterrows()}
 

@@ -34,4 +34,4 @@ git submodule init && git submodule update
 *  HiFi-GAN model is used as vocoder, official github repository: [link](https://github.com/jik876/hifi-gan).
 * Monotonic Alignment Search algorithm is used for unsupervised duration modelling, official github repository: [link](https://github.com/jaywalnut310/glow-tts).
 * Phonemization utilizes CMUdict, official github repository: [link](https://github.com/cmusphinx/cmudict).
-* 
+* The Grapheme-to-Phoneme conversion for Louisiana Creole is based on previous work for this site: [link](http://raz2021.pythonanywhere.com/speak).

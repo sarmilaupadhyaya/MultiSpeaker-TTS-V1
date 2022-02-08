@@ -19,7 +19,7 @@ base=  os.path.dirname(os.path.abspath(__file__))
 from kv_tts import convert, read_audio, write_tts
 @app.route("/", methods = ['POST', 'GET'])
 def home():
-    checkpts = "MultiSpeaker-TTS-V1/models"
+    checkpts = "models"
     
     if request.method == "POST":
         compare = request.form["compare"]
@@ -55,13 +55,13 @@ def home():
     else:
         return render_template("home.html")
     
-@app.route("out/model1.wav", methods = ['GET'])
+@app.route("/out/model1.wav", methods = ['GET'])
 def model1():
     return send_from_directory("out", "model1.wav")
 
-@app.route("out/gt.mp3", methods = ['GET'])
+@app.route("/out/gt.mp3", methods = ['GET'])
 def gt():
-    return send_from_directory("out", "gt.mp3")
+    return send_from_directory("/out", "gt.mp3")
 
 if __name__ == "__main__":
     app.debug = True

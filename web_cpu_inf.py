@@ -70,6 +70,7 @@ def get_text(text, language,add_blank=True):
     return text_norm
 
 def load_checkpoint(checkpoint_path, model, optimizer=None):
+    print(checkpoint_path)
     assert os.path.isfile(checkpoint_path)
     checkpoint_dict = torch.load(checkpoint_path, map_location='cpu')
     iteration = 1
@@ -136,7 +137,7 @@ def main(text, checkpts="models", timesteps=50, speaker_id=2, lang_id=1, languag
     checkpt = os.path.join(checkpts, chosen)
     generator = load_grad_tts(checkpt, nsymbols, rep, rep)
     vocoder = load_hifi()
-    cmu = cmudict.CMUDict('MultiSpeaker-TTS-V1/resources/cmu_dictionary')
+    cmu = cmudict.CMUDict('resources/cmu_dictionary')
     texts = [text]
     with torch.no_grad():
         for i, text in enumerate(texts):

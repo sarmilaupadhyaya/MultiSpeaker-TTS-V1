@@ -57,7 +57,7 @@
                 <!-- Portfolio Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Synthesis</h2>
 		<!--our form-->	
-		    <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0">Language Options</h3>
+		    <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0"></h3>
 		    <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -78,13 +78,15 @@
 			    </textarea><br><br>
 			 </div>
 			 
+        			<h2 class="text-center">Choose Following Options : </h2>
+        	<div style="width: 50%; float:left">
 			 <div class="form-floating mb-4 column3">
 			    <label for="text_lang"  >Language of Text</label>
-			    <select id="select-button" name="text_lang" id="text_lang">
-			 
-			      <option class="green" value="en">English</option>
-			      <option class="green" value="fr">French</option>
-			      <option class="green" value="kv">Louisiana Creole</option>
+			    
+			    <select  class="btn-group" name="text_lang" id="text_lang">
+			      <option  value="en">English</option>
+			      <option  value="fr">French</option>
+			      <option  value="kv">Louisiana Creole</option>
 			    </select> <br><br>
 			 </div>
 			 
@@ -92,48 +94,54 @@
 			    
 			<div class="form-floating mb-4 column3">
 				<label for="Rep"  >Language Representation</label>
-			        <select id="select-button" name="rep" id="rep">
-			        <option class="green" value="id">id (2 speakers)</option>
-			        <option class="green" value="emb">embeddings (6 speakers)</option>
+			        <select  name="rep" id="rep">
+			        <option  value="id">id (2 speakers)</option>
+			        <option  value="emb">embeddings (6 speakers)</option>
 			        </select><br><br>
 			</div>
-			    
+                  </div>
+                  
+                  <div style="width: 50%; float:right">   
 			    
 			<div class="form-floating mb-4">
 			<label for="speaker">Speaker</label>
-			    <select id="select-button" name="speaker" id="speaker">
+			    <select  name="speaker" id="speaker">
 			   
-			      <option class="green" value=0>SIWIS (FR - F)</option>
-			      <option class="green" value=1>LJS (EN -F)</option>
-			      <option class="green" value=2>VCTK_239 (EN -F -model 2 only)</option>
-			      <option class="green" value=3>VCTK_259 (EN -M  -model 2 only)</option>
-			      <option class="green" value=4>Sympaflex (FR - F)</option>
-			      <option class="green" value=5>Tundra (FR - M)</option>
+			      <option  value=0>SIWIS (FR - F)</option>
+			      <option  value=1>LJS (EN -F)</option>
+			      <option  value=2>VCTK_239 (EN -F -model 2 only)</option>
+			      <option  value=3>VCTK_259 (EN -M  -model 2 only)</option>
+			      <option  value=4>Sympaflex (FR - F)</option>
+			      <option  value=5>Tundra (FR - M)</option>
 			    </select><br><br>
 			  
 			</div>
 			
 			<div class="form-floating mb-4">
 			<label for="diffusion">Diffusion Rate</label>
-			    <select id="select-button" name="diffusion" id="diffusion">
+			    <select  name="diffusion" id="diffusion">
 			  
-			      <option class="green" value=50>50</option>
-			      <option class="green" value=25>25</option>
-			      <option class="green" value=10>10</option>
-			      <option class="green" value=5>5</option>
+			      <option  value=50>50</option>
+			      <option  value=25>25</option>
+			      <option  value=10>10</option>
+			      <option  value=5>5</option>
 			    </select><br><br>
 			    
 			 </div>
 			 
 			 <div class="form-floating mb-4">
 				<label for="compare">Compare to GTTS?</label>
-				    <select  id="select-button" name="compare" id="compare">
+				    <select   name="compare" id="compare">
 				   
-				      <option class="green" value=0>0</option>
-				      <option class="green" value=1>1</option>
+				      <option  value=0>0</option>
+				      <option  value=1>1</option>
 				    </select><br><br>
 				    
 			  <div>
+		</div>
+			  
+  <br/>
+  <br/>
 
 			<br>
 			<div class="form-floating mb-4">

@@ -7,6 +7,7 @@ Created on Tue Oct 12 10:30:35 2021
 """
 from flask import Flask, render_template, request, send_from_directory
 from flask_cors import CORS
+from flask import jsonify
 from web_cpu_inf import main as inf
 import os, sys
 from gtts import gTTS
@@ -19,10 +20,17 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 base=  os.path.dirname(os.path.abspath(__file__))
 
 from kv_tts import convert, read_audio, write_tts
+
+# prevent cached responses
+if app.config["DEBUG"]:
+    @app.after_request
+    def after_request(response):
+        response.headers["Cache-Control"] = " no-store,  max-age=0"
+        return response
+
 @app.route("/", methods = ['POST', 'GET'])
 def home():
     checkpts = "models"
-    
     if request.method == "POST":
         compare = request.form["compare"]
         language = request.form["text_lang"].lower()
@@ -32,7 +40,7 @@ def home():
         rep= request.form["rep"]
         #lang_rep = request.form["lang_rep"]
         #speaker_rep = request.form["speaker_rep"]
-        string = request.form["text"]
+        string = request.form["text"].strip()
         diffusion = int(request.form["diffusion"])
         out_f = "model1.wav"
         #accent
@@ -53,7 +61,10 @@ def home():
             else:
                 tts = gTTS(string, lang=language)
             write_tts(tts, "out/", "gt.mp3", base=base)
-        return render_template("home.html")
+
+        resp = jsonify(data={"ouraudio":"/out/model1.wav", "gratts":"/out/gt.mp3"}, success=True)
+        return resp
+        #return render_template("home.html")
     else:
         return render_template("home.html")
     

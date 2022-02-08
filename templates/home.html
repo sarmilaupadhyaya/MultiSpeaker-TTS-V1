@@ -1,88 +1,316 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Multilingual Multispeaker TTS</title>
-<link rel="stylesheet" type="text/css" href={{ url_for('static', filename = "tts_style.css") }}>
-</head>
-<body>
-<div style="overflow:scroll;">
-<h1>Multilingual Multispeaker TTS</h1>
-<p> <strong>Bonjour!</strong></p>
-</p>
-    <h3>Language Options</h3>
-        <p>
-            <br><strong>French</strong> 
-	    <br><strong>English</strong> 
-        </p>
-<form action="/" method = "post">
-<label for="text">Please provide the text you wish to hear.</label>
-    <br>
-    <textarea id="text" name="text">
-    </textarea><br><br>
-<label for="text_lang"  >Language of Text</label>
-    <select name="text_lang" id="text_lang">
-      <option value="en">English</option>
-      <option value="fr">French</option>
-      <option value="kv">Louisiana Creole</option>
-    </select>
-    <br>
-<label for="Rep"  >Language Representation</label>
-    <select name="rep" id="rep">
-      <option value="id">id (2 speakers)</option>
-      <option value="emb">embeddings (6 speakers)</option>
-    </select>
-    <br>
-<label for="speaker">Speaker</label>
-    <select name="speaker" id="speaker">
-    <br>
-      <option value=0>SIWIS (FR - F)</option>
-      <option value=1>LJS (EN -F)</option>
-      <option value=2>VCTK_239 (EN -F -model 2 only)</option>
-      <option value=3>VCTK_259 (EN -M  -model 2 only)</option>
-      <option value=4>Sympaflex (FR - F)</option>
-      <option value=5>Tundra (FR - M)</option>
-    </select>
-    <br>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Speaker Transformation Across Language</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">Multi Lingual TTS</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Synthesis</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Multilingual TTS</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Software Project Winter Semester, University of Lorraine</p>
+            </div>
+        </header>
+        <!-- Portfolio Section-->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Synthesis</h2>
+		<!--our form-->	
+		    <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0">Language Options</h3>
+		    <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                
+                <!--main form>
+                <!-- Contact Section Form-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7">
+			<form id="contactForm" align="center" action="/" method = "post" class="form">
+			
+			<div class="form-floating mb-3">
+			    <label for="text">Please provide the text you wish to hear.</label><br><br>
+			   
+			    <textarea placeholder="Please provide the text you wish to hear." class="form-control" id="text" name="text" >
+			    </textarea><br><br>
+			 </div>
+			 
+			 <div class="form-floating mb-4 column3">
+			    <label for="text_lang"  >Language of Text</label>
+			    <select id="select-button" name="text_lang" id="text_lang">
+			 
+			      <option class="green" value="en">English</option>
+			      <option class="green" value="fr">French</option>
+			      <option class="green" value="kv">Louisiana Creole</option>
+			    </select> <br><br>
+			 </div>
+			 
+			   
+			    
+			<div class="form-floating mb-4 column3">
+				<label for="Rep"  >Language Representation</label>
+			        <select id="select-button" name="rep" id="rep">
+			        <option class="green" value="id">id (2 speakers)</option>
+			        <option class="green" value="emb">embeddings (6 speakers)</option>
+			        </select><br><br>
+			</div>
+			    
+			    
+			<div class="form-floating mb-4">
+			<label for="speaker">Speaker</label>
+			    <select id="select-button" name="speaker" id="speaker">
+			   
+			      <option class="green" value=0>SIWIS (FR - F)</option>
+			      <option class="green" value=1>LJS (EN -F)</option>
+			      <option class="green" value=2>VCTK_239 (EN -F -model 2 only)</option>
+			      <option class="green" value=3>VCTK_259 (EN -M  -model 2 only)</option>
+			      <option class="green" value=4>Sympaflex (FR - F)</option>
+			      <option class="green" value=5>Tundra (FR - M)</option>
+			    </select><br><br>
+			  
+			</div>
+			
+			<div class="form-floating mb-4">
+			<label for="diffusion">Diffusion Rate</label>
+			    <select id="select-button" name="diffusion" id="diffusion">
+			  
+			      <option class="green" value=50>50</option>
+			      <option class="green" value=25>25</option>
+			      <option class="green" value=10>10</option>
+			      <option class="green" value=5>5</option>
+			    </select><br><br>
+			    
+			 </div>
+			 
+			 <div class="form-floating mb-4">
+				<label for="compare">Compare to GTTS?</label>
+				    <select  id="select-button" name="compare" id="compare">
+				   
+				      <option class="green" value=0>0</option>
+				      <option class="green" value=1>1</option>
+				    </select><br><br>
+				    
+			  <div>
 
-<label for="diffusion">Diffusion Rate</label>
-    <select name="diffusion" id="diffusion">
-    <br>
-      <option value=50>50</option>
-      <option value=25>25</option>
-      <option value=10>10</option>
-      <option value=5>5</option>
-    </select>
-    <br>
+			<br>
+			<div class="form-floating mb-4">
+			<input class="btn btn-primary btn-xl" type="submit" value="synthesize">
+			</div>
+			</form>
+		   </div>
+		   </div>
 
-<label for="compare">Compare to GTTS?</label>
-    <select name="compare" id="compare">
-    <br>
-      <option value=0>0</option>
-      <option value=1>1</option>
-    </select>
-    <br>
+		The audio generated by our TTS system
+		<audio controls>
+		  <source src="out/model1.wav" type="audio/wav">
+		Your browser does not support the audio element.
+		</audio>
 
+		<audio controls>
+		  <source src="out/gt.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+		</audio>
 
-
-<br>
-<input type="submit" value="synthesize">
-</form>
-
-The audio generated by our TTS system
-<audio controls>
-  <source src="out/model1.wav" type="audio/wav">
-Your browser does not support the audio element.
-</audio>
-
-<audio controls>
-  <source src="out/gt.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-
-<br>
-
-<p>Claésia Costa, Rasul Dent, Anna Kriukova, Sharmila Upadhyaya Last updated: <strong>-</strong></p>
-
-</div>
-</body>
+		
+		
+            </div>
+        </section>
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ms-auto"><p class="lead">We have introduced an adaptation of grad-TTS: Diffusion Probabilistic Model for Text-to-Speech
+to generate expressive, speaker-specific voices in both English and French. </p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">The homepage consists of a simple entry form where the user
+can enter a text and specify which model, language and speaker combination they would like to listen to. After the
+necessary information has been submitted, the text and parameters are passed to the inference script, which runs
+the appropriate model from the local environment.</p></div>
+            </div>
+        </section>
+        <!-- Contact Section-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Form-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7">
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Full name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">Phone number</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <!-- Submit Button-->
+                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            2215 John Daniel Drive
+                            <br />
+                            Clark, MO 65243
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                        <p class="lead mb-0">
+                            Freelance is a free to use, MIT licensed Bootstrap theme created by
+                            <a href="http://startbootstrap.com">Start Bootstrap</a>
+                            .
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; Your Website 2021</small></div>
+        </div>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio Modal 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+			<!--our form-->
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js">
+        function inputFocus(i) {
+    if (i.value == i.defaultValue) { i.value = ""; i.style.color = "#000"; }
+}
+function inputBlur(i) {
+    if (i.value == "") { i.value = i.defaultValue; i.style.color = "#888"; }
+}
+        </script>
+    </body>
 </html>

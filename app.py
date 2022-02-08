@@ -10,7 +10,9 @@ from flask_cors import CORS
 from web_cpu_inf import main as inf
 import os, sys
 from gtts import gTTS
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', 
+            static_folder='static',
+            template_folder='templates')
 CORS(app)
 #avoid using cached audio
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0

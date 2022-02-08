@@ -32,7 +32,7 @@ def home():
         #speaker_rep = request.form["speaker_rep"]
         string = request.form["text"]
         diffusion = int(request.form["diffusion"])
-        out_f = "model1.wav"
+        out_f = "MultiSpeaker-TTS-V1/model1.wav"
         #accent
         if language == "kv":
             string = convert(string, start="kv", output="ipa")
